@@ -7,17 +7,17 @@
             Une sélection de logements vérifiés selon des critères de qualité et de design
         </p>
         <div class="bigCard absolute w-[1206px] h-[310px] left-0 top-[79px]">
-            <img src="/Rectangle 5.png" class="absolute h-[310px] left-0 right-0" alt="">
+            <img src="/Rectangle5.png" class="absolute h-[310px] left-0 right-0" alt="">
         </div> 
         <div class="logo absolute w-[124px] h-[124px] left-[541px] top-[139px]">
-            <img class="absolute left-[7.79%] right-[7.93%] top-[4.73%] bottom-[4.73%]" src="/Vector (1).png" alt="">
+            <img class="absolute left-[7.79%] right-[7.93%] top-[4.73%] bottom-[4.73%]" src="/Vector(1).png" alt="">
         </div>
         <div class="secondaryCTA absolute w-[200px] h-[44px] left-[503px] top-[295px]">
             <button class="rectangle6 absolute top-0 left-0 right-0 bottom-0 bg-white rounded-[4px]">
                 <h1 class="absolute left-[24px] top-[16px] font-[700] text-[10px] leading-[12px] uppercase text-[#484848]">
                     Découvrir des logements
                 </h1>
-                <img class="absolute w-[4px] h-[10px] right-[16px] top-[16px] " src="/Vector 1.png" alt="">
+                <img class="absolute w-[4px] h-[10px] right-[16px] top-[16px] " src="/Vector1.png" alt="">
             </button>
         </div>
     </div>
