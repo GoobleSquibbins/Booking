@@ -19,7 +19,7 @@
                     class="experiences topcalctxt absolute w-[81px] h-[19px] left-[145px] font-[600] text-[16px] leading-[19px] text-[#484848]">
                     Expériences
                 </h3>
-                <img class="absolute rounded-tl-[12px] rounded-bl-[12px] w-[121px] left-0 top-0 bottom-0" src="/Rectangle 4 (1).png" alt="">
+                <img class="absolute rounded-tl-[12px] rounded-bl-[12px] w-[121px] left-0 top-0 bottom-0" src="/Rectangle hrzn.png" alt="">
             </button>
         </div>
         <div class="miniCard03 miniCard absolute left-[67.58%] right-[0%] top-[37.96%] bottom-[0%]">
@@ -28,7 +28,7 @@
                     class="aventures topcalctxt absolute w-[81px] h-[19px] left-[145px] font-[600] text-[16px] leading-[19px] text-[#484848]">
                     Aventures
                 </h3>
-                <img class="absolute rounded-tl-[12px] rounded-bl-[12px] w-[121px] left-0 top-0 bottom-0" src="/Rectangle 4 (2).png" alt="">
+                <img class="absolute rounded-tl-[12px] rounded-bl-[12px] w-[121px] left-0 top-0 bottom-0" src="/Rectangle ns.png" alt="">
             </button>
         </div>
     </div>
