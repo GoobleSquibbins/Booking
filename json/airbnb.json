@@ -1,0 +1,259 @@
+{
+    "all":[
+        {
+            "id":1,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":210,
+            "host":"superhost"
+        }
+        ,
+        {
+            "id":2,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"4.0",
+            "duration":3,
+            "totalStays":211,
+            "host":"superhost"
+        }
+        ,
+        {
+            "id":3,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":220,
+            "host":"superhost"
+        },
+        {
+            "id":4,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":100,
+            "host":"superhost"
+        }
+        ,
+        {
+            "id":5,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":100,
+            "host":"superhost"
+        }
+        ,
+        {
+            "id":6,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":100,
+            "host":"superhost"
+        }
+    ]
+    ,
+    "aventurez":[
+        {
+            "id":1,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":210,
+            "host":"superhost"
+        }
+        ,
+        {
+            "id":2,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"4.0",
+            "duration":3,
+            "totalStays":211,
+            "host":"superhost"
+        }
+        ,
+        {
+            "id":3,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":220,
+            "host":"superhost"
+        },
+        {
+            "id":4,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":100,
+            "host":"superhost"
+        }
+        ,
+        {
+            "id":5,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":100,
+            "host":"superhost"
+        }
+        ,
+        {
+            "id":6,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":100,
+            "host":"superhost"
+        }
+    ]
+    ,
+    "bienNotees":[
+        {
+            "id":1,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":210,
+            "host":"superhost"
+        }
+        ,
+        {
+            "id":2,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"4.0",
+            "duration":3,
+            "totalStays":211,
+            "host":"superhost"
+        }
+        ,
+        {
+            "id":3,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":220,
+            "host":"superhost"
+        },
+        {
+            "id":4,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":100,
+            "host":"superhost"
+        }
+        ,
+        {
+            "id":5,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":100,
+            "host":"superhost"
+        }
+        ,
+        {
+            "id":6,
+            "imgg": "iceberg.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":100,
+            "host":"superhost"
+        }
+    ]
+    ,
+    "bnbPlus":[
+        {
+            "id":1,
+            "imgg": "bnbPlus01.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":210,
+            "host":"superhost"
+        }
+        ,
+        {
+            "id":2,
+            "imgg": "bnbPlus01.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"4.0",
+            "duration":3,
+            "totalStays":211,
+            "host":"superhost"
+        }
+        ,
+        {
+            "id":3,
+            "imgg": "bnbPlus01.png",
+            "location": "Cayman Islands",
+            "desc":"2 Nights PACKAGE All Inclusive",
+            "price":577,
+            "rating":"5.0",
+            "duration":3,
+            "totalStays":220,
+            "host":"superhost"
+        }
+    ]
+
+}

@@ -1,5 +1,5 @@
 <template>
-    <div class="explorer absolute h-[137px] left-[80px] right-[80px] top-[838px]">
+    <div class="daFont absolute h-[137px] left-[80px] right-[80px] top-[838px]">
         <h1
             class="absolute w-[181px] h-[28px] top-0 left-0 not-italic font-[700] text-[24px] leading-[28px] text-[#484848]">
             Explorer Airbnb
@@ -41,9 +41,8 @@
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.explorer {
+.daFont {
     font-family: 'Roboto', sans-serif;
-    font-style: normal;
 }
 
 .miniCard {

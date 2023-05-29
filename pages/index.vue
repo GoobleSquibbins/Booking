@@ -5,6 +5,10 @@
             <Header />
             <Explorer />
             <Hebergement />
+            <Aventurez />
+            <MondeEntier />
+            <BienNotees/>
+            <ALaUne/>
         </div>
     </div>
 </template>
