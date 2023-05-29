@@ -48,8 +48,8 @@
                 </div>
                 <!-- button -->
                 <div class="leButtun absolute w-[146px] h-[48px] left-[221px] top-[436px]">
-                    <button class="absolute top-[0%] right-[0%] bottom-[0%] left-[0%] bg-[#FF5A5F] rounded-[4px]">
-                        <h1 class="absolute left-[21.23%] right-[21.92%] top-[31.25%] bottom-[29.17%] not-italic font-[700] text-[16px] leading-[19px] text-center text-[#FFFFFF]">
+                    <button class="absolute top-[0%] right-[0%] bottom-[0%] left-[0%] bg-[#FF5A5F] rounded-[4px] text-[#FFFFFF] hover:bg-white hover:text-[#FF5A5F] hover:border-[1px] hover:border-[#FF5A5F] transition ease-in-out delay-[50ms]">
+                        <h1 class="absolute left-[21.23%] right-[21.92%] top-[31.25%] bottom-[29.17%] not-italic font-[700] text-[16px] leading-[19px] text-center">
                             Rechercher
                         </h1>
                     </button>

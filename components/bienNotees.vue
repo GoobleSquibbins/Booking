@@ -9,7 +9,7 @@
         <div class="cardHolder w-full grid grid-cols-6 gap-[16px] mt-[24px]">
             <div class="card w-[188px] h-[240px] rounded-[4px]" v-for="item in data" :key="item.id">
                 <div class="cardContent flex flex-col items-start">
-                    <img :src="item.imgg" class="h-[240px]" alt="">
+                    <img :src="item.imgg" class="h-[240px] hover:shadow-2xl hover:shadow-[#335b8f85] transition ease-in-out delay-[50ms]" alt="">
                     <p class="font-[700] text-[10px] leading-[12px] text-[#767676] uppercase mt-[8px]">
                         {{ item.location }}
                     </p>

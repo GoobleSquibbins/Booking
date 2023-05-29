@@ -8,16 +8,19 @@
         </p>
         <div class="bigCard absolute w-[1206px] h-[310px] left-0 top-[79px]">
             <img src="/Rectangle5.png" class="absolute h-[310px] left-0 right-0" alt="">
-        </div> 
+        </div>
         <div class="logo absolute w-[124px] h-[124px] left-[541px] top-[139px]">
             <img class="absolute left-[7.79%] right-[7.93%] top-[4.73%] bottom-[4.73%]" src="/VectorBeeg.png" alt="">
         </div>
         <div class="secondaryCTA absolute w-[200px] h-[44px] left-[503px] top-[295px]">
-            <button class="rectangle6 absolute top-0 left-0 right-0 bottom-0 bg-white rounded-[4px]">
-                <h1 class="absolute left-[24px] top-[16px] font-[700] text-[10px] leading-[12px] uppercase text-[#484848]">
+            <button class="rectangle6 absolute top-0 left-0 right-0 bottom-0 bg-white rounded-[4px] flex flex-row items-center text-[#484848] hover:bg-[#FF5A5F] hover:text-white transition ease-in-out delay-[30ms]">
+                <h1 class="absolute left-[24px] top-[16px] font-[700] text-[10px] leading-[12px] uppercase">
                     Découvrir des logements
                 </h1>
-                <img class="absolute w-[4px] h-[10px] right-[16px] top-[16px] " src="/Vector1.png" alt="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-3 h-5 absolute right-[16px]">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
             </button>
         </div>
     </div>

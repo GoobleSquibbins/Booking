@@ -6,12 +6,15 @@
         <div class="cardHolder grid grid-cols-4 gap-[16px] absolute w-[1208px] h-[562px] top-[79px]">
             <div v-for="item in data" :key="item.id" class="cards w-[290px] h-[265px]">
                 <div class="cardContent flex flex-col items-start w-[290px] h-[265px]">
-                    <img class="object-cover w-[290px] h-[200px] rounded-[4px]" :src="item.imgg" alt="">
+                    <NuxtLink to="#">
+                        <img class="object-cover w-[290px] h-[200px] rounded-[4px] hover:shadow-2xl hover:shadow-[#335b8f85] transition ease-in-out delay-[50ms]" :src="item.imgg" alt="">
+                    </NuxtLink>
                     <div class="texts flex flex-col items-start w-full">
                         <div class="txt01 flex flex-row items-center mt-[8px]">
                             <button
-                                class="border-[1px] border-solid border-black rounded-[2px] box-border w-[74px] h-[28px]">
-                                <p class="text-center font-[700] text-[10px] leading-[12px] text-[#484848] uppercase">
+                                class="border-[1px] border-solid border-black rounded-[2px] box-border w-[74px] h-[28px]
+                                hover:border-[1px] hover:border-[#FF5A5F] hover:text-[#FF5A5F] text-[#484848] transition ease-in-out delay-[30ms]">
+                                <p class="text-center font-[700] text-[10px] leading-[12px] uppercase">
                                     {{ item.host }}
                                 </p>
                             </button>

@@ -8,9 +8,12 @@
             Voyages de plusieurs jours organisés par des experts locaux avec activités, repas et logements compris
         </p>
         <div class="cardHolderCase absolute grid grid-cols-6 gap-[16px] justify-start w-[1208px] h-[371px] top-[20.9%]">
-            <div v-for="item in data" class="cards flex flex-col items-start justify-start">
-                <div class="cardContent">
-                    <img class="h-[240px] rounded-[4px]" :src="item.imgg" :key="item.id" alt="">
+            <div v-for="item in data" class="cards flex flex-col items-start justify-start rounded-[4px]">
+                <div class="cardContent rounded-[4px]">
+                    <NuxtLink to="#">
+                        <img class="h-[240px] rounded-[4px] hover:shadow-2xl hover:shadow-[#335b8f85] transition ease-in-out delay-[50ms]"
+                            :src="item.imgg" :key="item.id" alt="">
+                    </NuxtLink>
                     <p class="absolute top-[248px] font-[700] text-[10px] leading-[12px] uppercase text-[#767676]">
                         {{ item.location }}
                     </p>
@@ -18,7 +21,7 @@
                         {{ item.desc }}
                     </h1>
                     <p class="absolute top-[310px] w-[188px] font-[300] text-[14px] leading-[21px] text-[#484848]">
-                        À partir de {{item.price}}€/personne - {{item.duration}} jours
+                        À partir de {{ item.price }}€/personne - {{ item.duration }} jours
                     </p>
                     <div class="rating absolute top-[96.23%] w-[30px]">
                         <p class="absolute w-[18px] h-[14px] font-700 text-[12px] leading-[14px] text-[#008489]">
