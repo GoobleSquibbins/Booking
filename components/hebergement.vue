@@ -45,21 +45,5 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body::-webkit-scrollbar {
-    margin-right: 10px;
-    width: 5px;
-}
 
-body::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-body::-webkit-scrollbar-thumb {
-    background: #FF5A5F;
-    border-radius: 4px;
-}
-
-body {
-    overflow: overlay;
-}
 </style>
