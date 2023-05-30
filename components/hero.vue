@@ -17,7 +17,7 @@
                     </label>
                     <div class="inpt absolute left-0 right-0 bottom-0 top-[22px]">
                         <input type="text"
-                            class="partout w-[343px] h-[48px] border-[1px] border-[#E3E3E3] border-solid absolute bottom-[0%] left-[0%] right-[0%] top-[0%] box-border bg-[#FFFFFF] rounded-[2px]"
+                            class="partout pl-[16px] focus:outline-none w-[343px] h-[48px] border-[1px] border-[#E3E3E3] border-solid absolute bottom-[0%] left-[0%] right-[0%] top-[0%] box-border bg-[#FFFFFF] rounded-[2px]"
                             placeholder="Partout">
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                         Arrivée
                     </label>
                     <div class="arriveeIn absolute left-0 right-[-0.5px] top-[22px] bottom-0">
-                        <input type="text" class="arrival box-border absolute top-[0%] right-[0%] bottom-[0%] left-[0%] bg-white border-[1px] border-solid border-[#E3E3E3] rounded-tl-[2px] rounded-bl-[2px]" placeholder="jj/mm/aaaa">
+                        <input type="text" class="arrival pl-[16px] box-border absolute top-[0%] right-[0%] bottom-[0%] left-[0%] bg-white border-[1px] border-solid border-[#E3E3E3] rounded-tl-[2px] rounded-bl-[2px]" placeholder="jj/mm/aaaa">
                     </div>
                 </div>
                 <div class="depart absolute w-[171.5px] h-[70px] left-[195px] top-[256px]">
@@ -34,7 +34,7 @@
                         Départ
                     </label>
                     <div class="departIn absolute left-0 right-[-0.5px] top-[22px] bottom-0">
-                        <input type="text" class="departo box-border absolute left-[0%] bottom-[0%] right-[0%] top-[0%] bg-[#FFFFFF] border-[1px] border-solid border-[#E3E3E3] rounded-tr-[2px] rounded-br-[2px]" placeholder="jj/mm/aaaaa">
+                        <input type="text" class="departo pl-[16px] box-border absolute left-[0%] bottom-[0%] right-[0%] top-[0%] bg-[#FFFFFF] border-[1px] border-solid border-[#E3E3E3] rounded-tr-[2px] rounded-br-[2px]" placeholder="jj/mm/aaaa">
                     </div>
                 </div>
                 <div class="voyageurs absolute w-[343px] h-[70px] left-[24px] top-[342px]">
@@ -42,7 +42,7 @@
                         Voyageurs
                     </label>
                     <div class="voyageursIn absolute top-[22px] right-0 bottom-0 left-0">
-                        <input type="text" class="voyage box-border absolute top-[0%] right-[0%] bottom-[0%] left-[0%] bg-[#FFFFFF] border-[1px] border-solid border-[#E3E3E3] rounded-[2px]"
+                        <input type="text" class="voyage pl-[16px] box-border absolute top-[0%] right-[0%] bottom-[0%] left-[0%] bg-[#FFFFFF] border-[1px] border-solid border-[#E3E3E3] rounded-[2px]"
                         placeholder="Voyageurs">
                     </div>
                 </div>
