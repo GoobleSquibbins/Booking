@@ -1,5 +1,6 @@
 <template>
-    <div class="daFont absolute w-[1208px] h-[469px] left-[80px] top-[2826px]">
+    <div id="exp"
+     class="daFont absolute w-[1208px] h-[469px] left-[80px] top-[2826px]">
         <h1 class="top-0 left-0 font-[700] text-[24px] leading-[28px] text-[#484848]">
             Expériences très bien notées
         </h1>

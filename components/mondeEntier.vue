@@ -1,5 +1,6 @@
 <template>
-    <div class="daFont absolute w-[1208px] h-[641px] top-[2097px] left-[80px]">
+    <div id="loge"
+    class="daFont absolute w-[1208px] h-[641px] top-[2097px] left-[80px]">
         <h1 class="absolute font-[700] text-[24px] leading-[28px] text-[#484848] top-0 left-0">
             Logements dans le monde entier
         </h1>

@@ -1,5 +1,6 @@
 <template>
-    <div class="daFont not-italic absolute w-[1208px] h-[469px] left-[80px] right-[80px] top-[1540px]">
+    <div id="aventurez"
+    class="daFont not-italic absolute w-[1208px] h-[469px] left-[80px] right-[80px] top-[1540px]">
         <h1
             class="absolute w-[342px] h-[28px] left-0 top-0 not-italic font-[700] text-[24px] leading-[28px] text-[#484848]">
             Découvrez les aventures Airbnb
