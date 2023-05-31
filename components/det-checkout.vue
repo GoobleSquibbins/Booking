@@ -22,50 +22,60 @@
                     </div>
                 </div>
                 <div class="form w-full flex flex-col items-center mt-[15px]">
-                    <form>
-                        <div class="dates w-full grid grid-cols-2 gap-0">
-                            <div class="in">
-                                <label class="text-[13px] font-thin leading-[16px] uppercase text-[#484848]">
-                                    Check-in
-                                </label>
-                                <input v-model="c_in"
-                                    class="focus:outline-none box-border p-[10px] text-center rounded-tl-[4px] rounded-bl-[4px] border-[1px] border-[#767676] w-[166px] h-[60px] left-0"
-                                    type="date" placeholder="DD/MM/YYYY">
-                            </div>
-                            <div class="in">
-                                <label class="text-[13px] font-thin leading-[16px] uppercase text-[#484848]">
-                                    Check-out
-                                </label>
-                                <input v-model="c_out"
-                                    class="focus:outline-none box-border p-[10px] rounded-tr-[4px] rounded-br-[4px] border-[1px] border-[#767676] w-[166px] h-[60px] left-0"
-                                    type="date">
-                            </div>
-                        </div>
-                        <div class="guests mt-[5px]">
+                    <div class="dates w-full grid grid-cols-2 gap-0">
+                        <div class="in">
                             <label class="text-[13px] font-thin leading-[16px] uppercase text-[#484848]">
-                                Number of Guests
+                                Check-in
                             </label>
-                            <br>
-                            <input v-model="guestNum" type="number" class="focus:outline-none
-                                        text-[30px] pl-[30px] w-full h-[60px] border-[1px] border-[#767676] rounded-[4px]">
+                            <input v-model="c_in"
+                                class="focus:outline-none box-border p-[10px] text-center rounded-tl-[4px] rounded-bl-[4px] border-[1px] border-[#767676] w-[166px] h-[60px] left-0"
+                                type="date" placeholder="DD/MM/YYYY">
                         </div>
-                        <div class="submit mt-[20px] float-right">
-                            <button @click.prevent="dino" class="bg-[#FF5A5F] text-white p-[10px] rounded-[4px] border-[1px] border-[#FF5A5F]
-                                        hover:bg-white hover:border-[1px] hover:border-[#FF5A5F] hover:text-[#FF5A5F]
-                                        transition ease-in-out delay-[30ms]">
-                                RESERVE
-                            </button>
+                        <div class="in">
+                            <label class="text-[13px] font-thin leading-[16px] uppercase text-[#484848]">
+                                Check-out
+                            </label>
+                            <input v-model="c_out"
+                                class="focus:outline-none box-border p-[10px] rounded-tr-[4px] rounded-br-[4px] border-[1px] border-[#767676] w-[166px] h-[60px] left-0"
+                                type="date">
                         </div>
-                    </form>
+                    </div>
+                    <div class="guests mt-[5px]">
+                        <label class="text-[13px] font-thin leading-[16px] uppercase text-[#484848]">
+                            Number of Guests
+                        </label>
+                        <br>
+                        <input v-model="guests" type="number"
+                            class="focus:outline-none
+                                            text-[30px] pl-[30px] w-full h-[60px] border-[1px] border-[#767676] rounded-[4px]">
+                    </div>
+                    <div class="submit mt-[20px] float-right">
+                        <button @click.prevent="dino" class="bg-[#FF5A5F] text-white p-[10px] rounded-[4px] border-[1px] border-[#FF5A5F]
+                                            hover:bg-white hover:border-[1px] hover:border-[#FF5A5F] hover:text-[#FF5A5F]
+                                            transition ease-in-out delay-[30ms]">
+                            CHECK
+                        </button>
+                    </div>
                     <p class="font-[300] text-[12px] leading-[14px] text-[#484848] mt-[25px]">
                         YOU WON'T BE CHARGED YET
                     </p>
-                    <p>
-                        {{ row01 }}
-                    </p>
-                    <p>
-                        {{ row02 }}
-                    </p>
+                    <div class="msg w-[70%] flex flex-col items-start mt-[10px] text-[14px] leading-[18px] font-[300] text-[#484848]">
+                        <p class="m-[5px]">
+                            {{ row01 }}
+                        </p>
+                        <p class="m-[5px]">
+                            {{ row02 }}
+                        </p>
+                        <p class="m-[5px]">
+                            {{ row03 }}
+                        </p>
+                        <p class="m-[5px]">
+                            {{ rowScrt }}
+                        </p>
+                        <p class="m-[5px]">
+                            {{ row04 }}
+                        </p>
+                    </div>
 
                 </div>
             </div>
@@ -85,49 +95,92 @@ export default {
         return {
             c_in: '',
             c_out: '',
-            guestNum: '',
-            perGuest: 50,
-            payUp:'',
-            total:'',
-            row01:'',
-            row02:''
+            guests: '',
+            payUp: '',
+            total: '',
+            row01: '',
+            row02: '',
+            row03: '',
+            row04: '',
+            rowScrt: ''
         }
     }
     ,
     methods: {
-        dino: function () {
+        dino() {
             let harga = document.getElementById('price').innerHTML
 
-            let guest = this.guestNum * this.perGuest
+            let dateIn = new Date(this.c_in)
+            let dateOut = new Date(this.c_out)
 
-            let c_in = new Date(this.c_in)
-            let c_out = new Date(this.c_out)
-            let selisih = c_out.getTime() - c_in.getTime()
+            let selisih = dateOut.getTime() - dateIn.getTime()
             let totalDif = Math.ceil(selisih / (1000 * 3600 * 24))
-            console.log(guest)
+
             if (totalDif > 0) {
-                if (this.guestNum == 1) {
+                if (this.guests == 1) {
                     this.payUp = totalDif * harga
-                    this.row01 = '$' + harga + ' x ' + totalDif + ' Hari'
-                    this.row02 = 'Total : ' + this.payUp
-                    console.log('$' + this.payUp + ' Days: ' + totalDif + ' ' )
-                } else if(this.guestNum !== 1 && this.guestNum > 0){
-                    this.payUp = (guest + (totalDif * harga))
-                    let svcFee = this.payUp + (this.payUp * 15 / 100)
-                    let tax = this.payUp + (this.payUp * 10 /100)
-                    this.row01 = '$' + harga + ' x ' + totalDif + ' Hari'
-                    console.log(this.row01)
-                    this.total = 'Total Price : ' + '$' + (this.payUp + svcFee + tax)
+                    this.row01 = '$' + harga + ' x ' + totalDif + ' Days' + ' : ' + '$' + this.payUp
+
+                    let tax = this.payUp * 10 / 100
+
+                    let svcFee = this.payUp * 15 / 100
+                    this.rowScrt = 'Total Guests : ' + this.guests
+                    this.row02 = 'Tax : ' + '$' + tax
+                    this.row03 = 'Service Fee : ' + '$' + svcFee
+                    this.row04 = 'Total Payment : ' + '$' + Math.ceil(this.payUp + tax + svcFee)
+                } else if (this.guests > 1) {
+                    let guestXtra = parseInt(this.guests) * 50
+                    this.payUp = totalDif * harga
+                    this.row01 = '$' + harga + ' x ' + totalDif + ' Days' + ' = ' + '$' + this.payUp
+
+                    this.rowScrt = 'Total Guests : ' + this.guests + ', Extra Fee : ' + '$' + guestXtra
+
+                    let tax = this.payUp * 10 / 100
+
+                    let svcFee = this.payUp * 15 / 100
+
+                    this.row02 = 'Tax : ' + '$' + tax
+                    this.row03 = 'Service Fee : ' + '$' + guestXtra
+                    this.row04 = 'Total Payment : ' + '$' + Math.ceil(this.payUp + tax + svcFee + guestXtra)
+                } else {
+                    this.row01 = 'Invalid Input'
                 }
-                else{
-                    this.payUp = 'error'
-                    console.log('error')
-                }
+            } else {
+                this.row01 = 'Invalid Input'
             }
-            else {
-                this.payUp = 'error'
-                console.log('error')
-            }
+
+
+            // let harga = document.getElementById('price').innerHTML
+
+            // let c_in = new Date(this.c_in)
+            // let c_out = new Date(this.c_out)
+            // let selisih = c_out.getTime() - c_in.getTime()
+            // let totalDif = Math.ceil(selisih / (1000 * 3600 * 24))
+            // console.log(guest)
+            // if (totalDif > 0) {
+            //     if (this.guestNum == 1) {
+            //         this.payUp = guest + (totalDif * harga)
+            //         this.row01 = '$' + harga + ' x ' + totalDif + ' Hari'
+            //         this.row02 = 'Total : ' + guest
+            //         console.log('$' + this.payUp + ' Days: ' + totalDif + ' ' )
+            //     } else if(this.guestNum !== 1 && this.guestNum > 0){
+            //         this.payUp = (totalDif * harga) + guest
+            //         let svcFee = this.payUp + (this.payUp * 15 / 100)
+            //         let tax = this.payUp + (this.payUp * 10 /100)
+            //         this.row01 = '$' + harga + ' x ' + totalDif + ' Hari'
+            //         this.row02 = 'Total : ' + guest
+            //         console.log(this.row01)
+            //         this.total = 'Total Price : ' + '$' + (this.payUp + svcFee + tax)
+            //     }
+            //     else{
+            //         this.payUp = 'error'
+            //         console.log('error')
+            //     }
+            // }
+            // else {
+            //     this.payUp = 'error'
+            //     console.log('error')
+            // }
 
         }
 
