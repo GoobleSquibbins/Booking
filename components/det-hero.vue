@@ -18,30 +18,30 @@
             </div>
         </div>
 
-        <div class="det-img grid grid-cols-2 gap-[16px] w-full h-full rounded-[10px]">
+        <div class="det-img grid grid-cols-2 gap-[16px] w-full h-[322.22px] rounded-[10px]">
             <div class="beegimg w-full h-full bg-black rounded-[10px]">
                 <img class="opacity-100 hover:opacity-80 transition ease-in-out delay-[30ms]
-                            h-full w-full object-fill rounded-tl-[10px] rounded-bl-[10px]" :src="item.thumbnail" alt="">
+                            h-[322.22px] w-full object-cover rounded-tl-[10px] rounded-bl-[10px]" :src="item.thumbnail" alt="">
             </div>
 
             <div class="miniImg grid grid-cols-2 gap-[16px] w-full h-full">
-                <div class="w-full h-full bg-black">
-                    <img :src="item.thumbnail"
-                        class="opacity-100 hover:opacity-80 transition ease-in-out delay-[30ms] h-full w-full" alt="">
+                <div class="w-full h-[153.11px] bg-black">
+                    <img :src="item.images[0]"
+                        class="text-whtie object-cover opacity-100 hover:opacity-80 transition ease-in-out delay-[30ms] h-full w-full" alt="Image Unavailable">
                 </div>
-                <div class="w-full h-full bg-black rounded-tr-[10px]">
-                    <img :src="item.thumbnail"
-                        class="opacity-100 hover:opacity-80 transition ease-in-out delay-[30ms] h-full w-full rounded-tr-[10px]"
-                        alt="">
+                <div class="w-full h-[153.11px] bg-black rounded-tr-[10px]">
+                    <img :src="item.images[1]"
+                        class="text-whtie object-cover opacity-100 hover:opacity-80 transition ease-in-out delay-[30ms] h-full w-full rounded-tr-[10px]"
+                        alt="Image Unavailable">
                 </div>
-                <div class="w-full h-full bg-black">
-                    <img :src="item.thumbnail"
-                        class="opacity-100 hover:opacity-80 transition ease-in-out delay-[30ms] h-full w-full" alt="">
+                <div class="w-full h-[153.11px] bg-black">
+                    <img :src="item.images[2]"
+                        class="text-whtie object-cover opacity-100 hover:opacity-80 transition ease-in-out delay-[30ms] h-full w-full" alt="Image Unavailable">
                 </div>
-                <div class="w-full h-full bg-black rounded-br-[10px]">
-                    <img :src="item.thumbnail"
-                        class="opacity-100 hover:opacity-80 transition ease-in-out delay-[30ms] h-full w-full rounded-br-[10px]"
-                        alt="">
+                <div class="w-full h-[153.11px] bg-black rounded-br-[10px]">
+                    <img :src="item.images[3]"
+                        class="text-whtie object-cover opacity-100 hover:opacity-80 transition ease-in-out delay-[30ms] h-full w-full rounded-br-[10px]"
+                        alt="Image Unavailable">
                 </div>
             </div>
         </div>

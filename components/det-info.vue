@@ -3,68 +3,52 @@
         function (i) { return i.id == productId })" class="w-full">
         <div class="head flex flex-row items-center w-full">
             <h1 class="font-[700] text-[24px] leading-[28px] text-[#484848]">
-                Room in a rental unit hosted by {{ item.brand }}
+               Product by : {{ item.brand }}
             </h1>
             <div class="img w-[50px] h-[50px] ml-auto">
-                <img class="float-right w-[50px] h-[50px] rounded-[50%]" :src="item.thumbnail" alt="">
+                <img class="float-right w-[50px] h-[50px] rounded-[50%] outline outline-[1px] outline-black outline-offset-[3px]" :src="item.thumbnail" alt="">
             </div>
         </div>
         <div class="facility grid grid-cols-3 gap-[16px] w-full mt-[20px] border-b-[1px] pb-[20px] border-[#767676]">
-            <div
-                class="card01 w-full bg-white border-[1px] border-[#767676] rounded-[4px] h-[60px] shadow-lg
-                                             flex flex-row items-center p-[10px] text-[16px] leading-[19px] font-[300] text-[#484848]">
-                Facility 01
+            <div class="card01 w-full bg-white border-[1px] border-[#767676] rounded-[4px] h-[60px] shadow-lg
+                            flex flex-row items-center p-[10px] text-[16px] leading-[19px] font-[300] text-[#484848]">
+                <p>
+                    Ratings : {{ item.rating }}
+                </p>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#484848" class="w-3 h-3 justify-center items-center ml-[5px]">
+                    <path fill-rule="evenodd"
+                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                        clip-rule="evenodd" />
+                </svg>
             </div>
-            <div
-                class="card02 w-full bg-white border-[1px] border-[#767676] rounded-[4px] h-[60px] shadow-lg
-                                             flex flex-row items-center p-[10px] text-[16px] leading-[19px] font-[300] text-[#484848]">
-                Facility 02
+            <div class="card02 w-full bg-white border-[1px] border-[#767676] rounded-[4px] h-[60px] shadow-lg
+                        flex flex-row items-center p-[10px] text-[16px] leading-[19px] font-[300] text-[#484848]">
+                <p>
+                    Category : {{ item.category }}
+                </p>
             </div>
-            <div
-                class="card03 w-full bg-white border-[1px] border-[#767676] rounded-[4px] h-[60px] shadow-lg
-                                             flex flex-row items-center p-[10px] text-[16px] leading-[19px] font-[300] text-[#484848]">
-                Facility 03
+            <div class="card03 w-full bg-white border-[1px] border-[#767676] rounded-[4px] h-[60px] shadow-lg
+                    flex flex-row items-center p-[10px] text-[16px] leading-[19px] font-[300] text-[#484848]">
+                <p>
+                    Stock : {{ item.stock }}
+                </p>
             </div>
         </div>
         <div class="service w-full flex flex-col items-start mt-[20px] border-b-[1px] border-[#767676] pb-[20px]">
-            <div class="serv01 w-full">
-                <h1 class="font-[700] text-[19px] leading-[24px] text-[#484848] mb-[8px]">
-                    Service 01
-                </h1>
-                <p class="font-[300] text-[16px] leading-[19px] text-[#767676]">
-                    desc 01
-                </p>
-            </div>
-            <div class="serv02 w-full mt-[20px] mb-[20px]">
-                <h1 class="font-[700] text-[19px] leading-[24px] text-[#484848] mb-[8px]">
-                    Service 02
-                </h1>
-                <p class="font-[300] text-[16px] leading-[19px] text-[#767676]">
-                    desc 02
-                </p>
-            </div>
-            <div class="serv03 w-full">
-                <h1 class="font-[700] text-[19px] leading-[24px] text-[#484848] mb-[8px]">
-                    Service 03
-                </h1>
-                <p class="font-[300] text-[16px] leading-[19px] text-[#767676]">
-                    desc 03
-                </p>
-            </div>
+            <p class="font-[300] text-[16px] leading-[19px] text-[#484848]">
+                {{ item.description }}
+            </p>
         </div>
 
         <div class="host mt-[20px]">
-            <h1 class="font-[700] text-[24px] leading-[28px] text-[#484848]">
-                Meet your host
-            </h1>
 
             <div class="hostCardHolder flex flex-col items-center bg-[#ededed] w-full rounded-[12px] mt-[24px]">
                 <div
                     class="hostCard grid grid-cols-3 gap-[5px] bg-white rounded-[20px] w-[60%] mt-[30px] mb-[30px] shadow-xl">
                     <div class="w-full hostProfile flex flex-col items-center col-span-2 p-[75px]">
-                        <img class="h-[100px] w-[100px] rounded-[50%]" :src="item.thumbnail" alt="">
+                        <img class="h-[100px] w-[100px] rounded-[50%] outline outline-[1px] outline-black outline-offset-[5px]" :src="item.thumbnail" alt="">
                         <h1 class="font-[700] text-[24px] leading-[28px] text-[#484848] mt-[10px]">
-                            {{ item.brand }}
+                            {{ item.title }}
                         </h1>
                         <p class="font-[300] text-[14px] leading-[18px] text-[#767676]">
                             {{ item.category }}
@@ -107,7 +91,7 @@
                     </div>
                 </div>
 
-                <div class="shortInfo w-[60%] flex flex-col items-start">
+                <!-- <div class="shortInfo w-[60%] flex flex-col items-start">
                     <p class="font-[300] text-[18px] leading-[21px] text-[#484848] m-[10px]">
                         Where I went to school : ___
                     </p>
@@ -146,7 +130,7 @@
                         class="bg-[#FF5A5F] text-white font-[700] text-[19px] leading-[21px] p-[15px] rounded-[7px] mt-[20px]">
                         Message Host
                     </button>
-                </div>
+                </div> -->
                 <div class="toprotect w-[60%] text-start mt-[20px] pb-[30px]">
                     <p class="text-[12px] leading-[15px] font-[300] text-[#484848]">
                         To protect your payment, never transfer money or communicate outside of the Airbnb website or app.
@@ -154,7 +138,7 @@
                 </div>
             </div>
 
-            <div class="placeInfo text-start mt-[30px]">
+            <!-- <div class="placeInfo text-start mt-[30px]">
                 <div class="pb-[20px] border-b-[1px] border-[#767676] ">
                     <h1 class="font-[700] text-[24px] leading-[28px] text-[#484848]">
                         About this place
@@ -232,7 +216,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>

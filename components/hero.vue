@@ -1,12 +1,12 @@
 <template>
     <div class="heroo hero_bg
-    w-full
-     md:w-[1366px] md:h-[750px] top-0 left-0 right-0 absolute bg-[#1d6187]">
+    w-full h-full
+     md:w-[1366px] md:h-[750px] top-0 left-0 right-0 bg-[#1d6187] relative">
             <img class="absolute object-cover sm:w-[1366px] sm:h-[750px] left-0 top-0 right-0" src="https://s3-alpha-sig.figma.com/img/95f0/5073/2310fe90b005326703715340fba77f9f?Expires=1685923200&Signature=DcdsIOYyxlcKlLKnl-RxK56ccnYriVsN7jNYNQsdc7Pw3AlAJ8aFcp0p0NV6ldHAwuwQor1Po6iZB9ByAFGKX5P-6TELUlLZ1n58Qbko6xPPhpdYlpKwYfMl~CsgEzU6JC0A~SJI6VtjYncpdxOOEHjbnhpEaR3rn8P3LFugu80z~4uBMQt5dm68tvQX1aqbcJAnPlD5KoQ7Xo62Hids3dCeBI-8sWvhV15AM7hTplgAPJ-8wF~2CD8dNcN1Q86UGG-0G2PcPD~FQOp~OjXGvo6Oi9gGZHTqqfpLiUbkbjBrMbBvLY-Iq2VH1Qll~a0BYD2axBsOEEw-bPmcjxmZrA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
-            <form class="reserveCard 
+            <!-- <form class="reserveCard 
             w-[100px] h-[200px] left-[30px] top-[70px]
             md:w-[391px] md:h-[508px] md:left-[80px] md:top-[132px] absolute">
-                <!-- Title -->
+            
                 <div class="absolute card
                 w-[350px] h-[450px]
                 md:w-[391px] md:h-[508px] left-0 top-0 bg-white rounded-[4px]">
@@ -18,7 +18,7 @@
                         Réservez des hébergements et des activités uniques.
                     </div>
                 </div>
-                <!-- input -->
+                
                 <div class="input_text absolute w-[343px] h-[70px] left-[24px] top-[170px]">
                     <label
                         class="absolute w-[17px] h-[14px] left-0 top-0 font-[700] text-[12px] leading-[14px] uppercase text-[#484848]">
@@ -55,7 +55,7 @@
                         placeholder="Voyageurs">
                     </div>
                 </div>
-                <!-- button -->
+                
                 <div class="leButtun absolute w-[146px] h-[48px] left-[221px] top-[436px]">
                     <button class="absolute top-[0%] right-[0%] bottom-[0%] left-[0%] bg-[#FF5A5F] rounded-[4px] text-[#FFFFFF] hover:bg-white hover:text-[#FF5A5F] hover:border-[1px] hover:border-[#FF5A5F] transition ease-in-out delay-[50ms]">
                         <h1 class="absolute left-[21.23%] right-[21.92%] top-[31.25%] bottom-[29.17%] not-italic font-[700] text-[16px] leading-[19px] text-center">
@@ -63,7 +63,7 @@
                         </h1>
                     </button>
                 </div>
-            </form>
+            </form> -->
         </div>
 </template>
 
