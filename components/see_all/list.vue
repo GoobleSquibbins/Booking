@@ -140,7 +140,7 @@
                     </p>
 
                     <div class="w-full mt-[8px]">
-                        <button class="w-full" @click="addToCart(item.id, this.qty)">
+                        <button class="w-full" @click="addToCart(item.id, qty)">
                             <div
                                 class="
                                                                                                                                                                                             w-full h-[28px]
