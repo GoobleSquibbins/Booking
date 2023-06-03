@@ -178,7 +178,7 @@ export default {
             pickedCat: '',
             turnOn: false,
             showCart: false,
-            cart: JSON.parse(localStorage.getItem("a")),
+            cart: '',
             qty: 1
         }
     }
@@ -198,6 +198,9 @@ export default {
         ,
         removeItemFromCart(cartId) {
             let stuffAlreadyInTheCartRn = JSON.parse(localStorage.getItem("a"))
+            if (stuffAlreadyInTheCartRn.length === 1){
+                document.getElementById('Emptycart').style.display = "none";
+            }
             console.log(stuffAlreadyInTheCartRn)
             for (let l = 0; l < stuffAlreadyInTheCartRn.length; l++) {
                 if (stuffAlreadyInTheCartRn[l].cartId === cartId) {
@@ -205,6 +208,8 @@ export default {
                     stuffAlreadyInTheCartRn.splice(indexu, 1)
                     localStorage.setItem("a", JSON.stringify(stuffAlreadyInTheCartRn))
                     this.cart = JSON.parse(localStorage.getItem("a"))
+                    console.log(JSON.parse(localStorage.getItem("a")))
+                    
                 }
             }
         }
@@ -213,7 +218,7 @@ export default {
             if(this.showCart == true){
                 document.getElementById('Emptycart').style.display = "block";
             }
-            
+
             let { data: product } = await useFetch('https://dummyjson.com/products/' + id);
             let dataProduct = product._rawValue;
             dataProduct.qty = qty;
@@ -262,9 +267,10 @@ export default {
         showC() {
             this.showCart = !this.showCart
             console.log(this.showCart)
+            document.getElementById('Emptycart').style.display = "none";
             if (this.showCart == true) {
                 document.getElementById('cart').style.display = "flex";
-                if (!localStorage.getItem("a")) {
+                if (JSON.parse(localStorage.getItem("a")).length === 0 ) {
                     document.getElementById('Emptycart').style.display = "none";
                 } else {
                     document.getElementById('Emptycart').style.display = "block";
