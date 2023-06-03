@@ -11,7 +11,7 @@
                 <div class="cardContent flex flex-col items-start">
                     <NuxtLink to="#">
                         <img :src="item.thumbnail"
-                            class="h-[240px] hover:shadow-2xl hover:shadow-[#335b8f85] transition ease-in-out delay-[50ms]"
+                            class="h-[240px] object-cover hover:shadow-2xl hover:shadow-[#335b8f85] transition ease-in-out delay-[50ms]"
                             alt="">
                     </NuxtLink>
                     <p class="font-[700] text-[10px] leading-[12px] text-[#767676] uppercase mt-[8px]">

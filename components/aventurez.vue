@@ -10,7 +10,7 @@
             <div v-for="stuff in item.products" class="cards flex flex-col items-start justify-start rounded-[4px]">
                 <div class="cardContent rounded-[4px]">
                     <NuxtLink :to="'details/' + stuff.id">
-                        <img class="h-[240px] rounded-[4px] hover:shadow-2xl hover:shadow-[#335b8f85] transition ease-in-out delay-[50ms]"
+                        <img class="h-[240px] object-cover rounded-[4px] hover:shadow-2xl hover:shadow-[#335b8f85] transition ease-in-out delay-[50ms]"
                             :src="stuff.thumbnail" alt="">
                     </NuxtLink>
                     <p class="mt-[8px] mb-[4px] font-[700] text-[10px] leading-[12px] uppercase text-[#767676]">

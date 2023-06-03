@@ -50,7 +50,17 @@
 
 <script setup>
 const { productId } = useRoute().params
-const { data: stuff } = await useFetch('https://dummyjson.com/products')
+const { data: stuff } = await useFetch('https://dummyjson.com/products?limit=0')
+</script>
+
+<script>
+export default{
+    data(){
+        return{
+
+        }
+    }
+}
 </script>
 
 <style lang="scss" scoped></style>

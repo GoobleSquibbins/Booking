@@ -22,7 +22,7 @@
                         </label>
                         <br>
 
-                        <input v-model="itemNum" type="number" class="
+                        <input v-model="itemNum" type="number" @keyup="count()" class="
                             w-full h-[60px] 
                             border-[1px] border-[#767676] rounded-[4px]
                             text-center text-[16px] leading-[19px]" />
@@ -59,14 +59,14 @@
 
 <script setup>
 const { productId } = useRoute().params
-const { data: stuff } = await useFetch('https://dummyjson.com/products')
+const { data: stuff } = await useFetch('https://dummyjson.com/products?limit=0')
 </script>
 
 <script>
 export default {
     data() {
         return {
-            itemNum: '',
+            itemNum: 1,
             msg : ''
         }
     }

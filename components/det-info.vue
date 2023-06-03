@@ -47,10 +47,10 @@
                     class="hostCard grid grid-cols-3 gap-[5px] bg-white rounded-[20px] w-[60%] mt-[30px] mb-[30px] shadow-xl">
                     <div class="w-full hostProfile flex flex-col items-center col-span-2 p-[75px]">
                         <img class="h-[100px] w-[100px] rounded-[50%] outline outline-[1px] outline-black outline-offset-[5px]" :src="item.thumbnail" alt="">
-                        <h1 class="font-[700] text-[24px] leading-[28px] text-[#484848] mt-[10px]">
+                        <h1 class="font-[700] text-[24px] leading-[28px] text-[#484848] mt-[15px]">
                             {{ item.title }}
                         </h1>
-                        <p class="font-[300] text-[14px] leading-[18px] text-[#767676]">
+                        <p class="font-[300] text-[14px] leading-[18px] text-[#767676] mt-[10px]">
                             {{ item.category }}
                         </p>
                     </div>
@@ -223,7 +223,7 @@
 
 <script setup>
 const { productId } = useRoute().params
-const { data: stuff } = await useFetch('https://dummyjson.com/products')
+const { data: stuff } = await useFetch('https://dummyjson.com/products?limit=0')
 </script>
 
 <style lang="scss" scoped></style>
