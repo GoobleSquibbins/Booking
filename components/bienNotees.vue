@@ -1,11 +1,28 @@
 <template>
     <div id="exp" class="daFont w-[1208px] h-[469px] left-[80px] mt-[88px]">
-        <h1 class="font-[700] text-[24px] leading-[28px] text-[#484848]">
-            Expériences très bien notées
-        </h1>
-        <p class="w-[577px] mt-[8px] font-[300] text-[16px] leading-[19px] text-[#484848]">
-            Voyages de plusieurs jours organisés par des experts locaux avec activités, repas et logements compris
-        </p>
+        <div class="header flex flex-row items-start w-full">
+            <div class="texts flex flex-col">
+                <h1 class="font-[700] text-[24px] leading-[28px] text-[#484848]">
+                    Expériences très bien notées
+                </h1>
+                <p class="w-[577px] mt-[8px] font-[300] text-[16px] leading-[19px] text-[#484848]">
+                    Voyages de plusieurs jours organisés par des experts locaux avec activités, repas et logements compris
+                </p>
+            </div>
+            <NuxtLink to="seeAll"
+                class="border-[1px] border-[#484848] rounded-[20px] ml-auto p-[10px]
+                hover:text-black hover:stroke-black text-[#484848] stroke-[#484848] hover:border-black transition ease-in-out delay-[30ms]">
+                <button class="
+                        w-full
+                        flex flex-row items-center text-center">
+                    <h1 class="
+                            font-[700] text-[16px] leading-[19px]">
+                        See all products
+                    </h1>
+                </button>
+            </NuxtLink>
+        </div>
+
         <div class="cardHolder w-full grid grid-cols-6 gap-[16px] mt-[24px]">
             <div class="card w-[188px] h-[240px] rounded-[4px]" v-for="item in data.products" :key="item.id">
                 <div class="cardContent flex flex-col items-start">
@@ -28,20 +45,6 @@
                             {{ item.rating }}
                         </p>
                         <img src="/Star.png" class="h-[8px] w-[8px] ml-[4px]" alt="">
-                    </div>
-                    <div class="w-full mt-[5px]">
-                        <button class="hover:border-[#FF5A5F] hover:text-[#FF5A5F] hover:stroke-[#FF5A5F] hover:bg-white
-                        transition ease-in-out delay-[30ms]
-                        w-full border-[1px] border-[#FF5A5F] rounded-[4px] text-white stroke-white bg-[#FF5A5F]
-                        flex flex-row items-center justify-center">
-                            <p class="text-[12px] leading-[14px]">
-                                Add to cart
-                            </p>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                class="w-5 h-5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                            </svg>
-                        </button>
                     </div>
                 </div>
             </div>

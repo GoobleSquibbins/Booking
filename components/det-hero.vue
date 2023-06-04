@@ -50,7 +50,8 @@
 
 <script setup>
 const { productId } = useRoute().params
-const { data: stuff } = await useFetch('https://dummyjson.com/products?limit=0')
+const { data: stuf } = await useFetch('https://dummyjson.com/products?limit=0')
+const stuff = stuf._rawValue
 </script>
 
 <script>

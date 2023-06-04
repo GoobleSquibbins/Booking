@@ -14,6 +14,9 @@
                         $<span id="price" class="text-[24px] leading-[28px] font-[300] text-[#484848]">{{ item.price
                         }}</span>
                     </h1>
+                    <p class="mt-[5px]">
+                        Stock : <span id="stock">{{ item.stock }}</span>
+                    </p>
                 </div>
                 <div class="form w-full flex flex-col items-center">
                     <div class="guests mt-[5px] w-full">
@@ -23,15 +26,15 @@
                         <br>
 
                         <input v-model="itemNum" type="number" @keyup="count()" class="
-                            w-full h-[60px] 
-                            border-[1px] border-[#767676] rounded-[4px]
-                            text-center text-[16px] leading-[19px]" />
+                                                w-full h-[60px] 
+                                                border-[1px] border-[#767676] rounded-[4px]
+                                                text-center text-[16px] leading-[19px]" />
 
                     </div>
                     <div class="submit mt-[20px] w-full">
-                        <button @click="count" class="bg-[#FF5A5F] text-white p-[10px] rounded-[4px] border-[1px] border-[#FF5A5F]
-                                hover:bg-white hover:border-[1px] hover:border-[#FF5A5F] hover:text-[#FF5A5F]
-                                transition ease-in-out delay-[30ms] w-full">
+                        <button @click="addToCart(item.id)" class="bg-[#FF5A5F] text-white p-[10px] rounded-[4px] border-[1px] border-[#FF5A5F]
+                                                    hover:bg-white hover:border-[1px] hover:border-[#FF5A5F] hover:text-[#FF5A5F]
+                                                    transition ease-in-out delay-[30ms] w-full">
                             <p>
                                 Add to cart
                             </p>
@@ -41,15 +44,62 @@
                     <p class="font-[300] text-[12px] leading-[14px] text-[#484848] mt-[25px]">
                         YOU WON'T BE CHARGED YET
                     </p>
-                    <p class="msg w-full text-center">
-                        {{ msg }}
+
+                    <p class="error w-full text-center mt-[10px]">
+                        {{ error }}
                     </p>
-                    <p id="stock" class="hidden">
-                        {{ item.stock }}
-                    </p>
-                    <p id="price" class="hidden">
-                        {{ item.price }}
-                    </p>
+
+                    <div class="row01 w-full grid grid-cols-3 gap-[10px] mt-[10px]">
+                        <div class="left w-full col-span-2 flex flex-row items-start justify-start ">
+                            <p class="msg ">
+                                {{ msg }}
+                            </p>
+                        </div>
+                        <div class="right w-full flex flex-row items-start justify-end ">
+                            <p class="msg">
+                                {{ totalPriceNoTax }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row02 w-full grid grid-cols-3 gap-[10px] mt-[5px]">
+                        <div class="left col-span-2 w-full flex flex-row items-start justify-start ">
+                            <p class="msg ">
+                                {{ taxTxt }}
+                            </p>
+                        </div>
+                        <div class="right w-full flex flex-row items-start justify-end ">
+                            <p class="msg ">
+                                {{ tax }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row03 w-full grid grid-cols-3 gap-[10px] mt-[5px]">
+                        <div class="left col-span-2 w-full flex flex-row items-start justify-start ">
+                            <p class="msg ">
+                                {{ xtraFeeTxt }}
+                            </p>
+                        </div>
+                        <div class="right w-full flex flex-row items-start justify-end ">
+                            <p class="msg ">
+                                {{ xtraFee }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row04 w-full grid grid-cols-3 gap-[10px] mt-[5px]">
+                        <div class="left col-span-2 w-full flex flex-row items-start justify-start ">
+                            <p class="msg ">
+                                {{ subTotalTxt }}
+                            </p>
+                        </div>
+                        <div class="right w-full flex flex-row items-start justify-end ">
+                            <p class="msg ">
+                                {{ subTotal }}
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -58,6 +108,8 @@
 </template>
 
 <script setup>
+import ProductId from '~/pages/details/[productId].vue';
+
 const { productId } = useRoute().params
 const { data: stuff } = await useFetch('https://dummyjson.com/products?limit=0')
 </script>
@@ -67,20 +119,118 @@ export default {
     data() {
         return {
             itemNum: 1,
-            msg : ''
+            msg: '',
+            totalPriceNoTax: '',
+            tax: '',
+            taxTxt: '',
+            xtraFee: '',
+            xtraFeeTxt: '',
+            subTotal: '',
+            subTotalTxt: '',
+            error: ''
         }
     }
     ,
     methods: {
-        count() {
-            let stock = document.getElementById('stock').innerHTML
-            let price = document.getElementById('price').innerHTML
-            if (this.itemNum > 0 && this.itemNum <= stock) {
-                this.msg = '$' + this.itemNum * price
+        async addToCart(prodId) {
+            console.log(prodId)
+            let { data: product } = await useFetch('https://dummyjson.com/products/' + prodId)
+            let dataProduct = product._rawValue
+            dataProduct.qty = this.itemNum
+            let leStock = document.getElementById('stock').innerHTML
+            console.log(dataProduct)
+            if (dataProduct.qty > leStock) {
+                console.log('cant do that cuh')
             } else {
-                this.msg = 'Invalid Quantity'
+                if (!localStorage.getItem("a")) {
+                    console.log('aint got item with this id inside the cart pardner')
+                    let array = []
+                    dataProduct.cartId = 1
+                    array.push(dataProduct)
+                    localStorage.setItem("a", JSON.stringify(array))
+                    console.log(JSON.parse(localStorage.getItem("a")))
+                    console.log(dataProduct)
+                    // this.cart = JSON.parse(localStorage.getItem("a"))
+                    console.log('im going insane')
+                } else {
+                    let stuffAlreadyInside = JSON.parse(localStorage.getItem("a"))
+                    console.log(stuffAlreadyInside + ' cheese')
+                    let newArray = []
+                    for (let i = 0; i < stuffAlreadyInside.length; i++) {
+                        if (!newArray.includes(stuffAlreadyInside[i].id)) {
+                            newArray.push(stuffAlreadyInside[i].id)
+                        }
+                    }
+                    console.log(newArray + ' poof')
+                    if (!newArray.includes(dataProduct.id)) {
+                        dataProduct.cartId = stuffAlreadyInside.length + 1
+                        stuffAlreadyInside.push(dataProduct)
+                        localStorage.setItem("a", JSON.stringify(stuffAlreadyInside));
+                        this.cart = JSON.parse(localStorage.getItem("a"))
+                        console.log(stuffAlreadyInside[10].id + ' camed');
+                    } else {
+                        for (let j = 0; j < stuffAlreadyInside.length; j++) {
+                            console.log('shidded')
+                            if (stuffAlreadyInside[j].id === prodId) {
+                                let totalQty = stuffAlreadyInside[j].qty + this.itemNum
+                                console.log(stuffAlreadyInside[j].stock)
+                                console.log(totalQty)
+                                if (totalQty <= stuffAlreadyInside[j].stock) {
+                                    stuffAlreadyInside[j].qty += this.itemNum
+                                } else {
+                                    console.log('we run out of stock mate sorry')
+                                }
+                                localStorage.setItem("a", JSON.stringify(stuffAlreadyInside))
+                                this.cart = JSON.parse(localStorage.getItem("a"))
+                            }
+                        }
+                        console.log('shid and camed')
+                    }
+                    console.log('im going insaner')
+                }
+                console.log(dataProduct.id + ' cheese ' + dataProduct.qty)
+            }
+
+        }
+        ,
+        async count() {
+            let whatId = useRoute().params
+            console.log(whatId.productId)
+            let { data: product } = await useFetch('https://dummyjson.com/products/' + whatId.productId)
+            let prodData = product._rawValue
+            let stock = prodData.stock
+            console.log(prodData.price)
+            let price = prodData.price
+            if (this.itemNum > 0 && this.itemNum <= stock) {
+                this.msg = 'Item Price : ' + '$' + price + ' x ' + this.itemNum
+                let countTotalPriceNoTax = price * this.itemNum
+                this.totalPriceNoTax = '$' + countTotalPriceNoTax
+                let getTaxxedBaka = countTotalPriceNoTax * 10 / 100
+                this.taxTxt = 'Tax : ' + '$' + this.totalPriceNoTax + ' x ' + '10%'
+                this.tax = '$' + getTaxxedBaka
+                let getSvcFeed = countTotalPriceNoTax * 15 / 100
+                this.xtraFeeTxt = 'Service Fee : ' + '$' + this.totalPriceNoTax + ' x ' + '15%'
+                this.xtraFee = '$' + getSvcFeed
+                let countTotal = countTotalPriceNoTax + getTaxxedBaka + getSvcFeed
+                this.subTotalTxt = 'Sub Total : '
+                this.subTotal = '$' + countTotal
+                this.error = ''
+            } else {
+                this.msg = ''
+                this.totalPriceNoTax = ''
+                this.tax = ''
+                this.taxTxt = ''
+                this.xtraFee = ''
+                this.xtraFeeTxt = ''
+                this.subTotal = ''
+                this.subTotalTxt = ''
+                this.error = 'Invalid Quantity'
             }
         }
+    }
+    ,
+    created() {
+        this.count()
     }
 }
 </script>

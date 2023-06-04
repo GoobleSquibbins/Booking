@@ -1,11 +1,28 @@
 <template>
     <div class="daFont w-[1208px] mt-[88px]">
-        <h1 class="top-0 left-0 font-[700] text-[24px] leading-[28px] text-[#484848]">
-            Destinations Airbnb Plus à la Une
-        </h1>
-        <p class="w-[577px] mt-[8px] font-[300] text-[16px] leading-[19px] text-[#484848]">
-            Voyages de plusieurs jours organisés par des experts locaux avec activités, repas et logements compris
-        </p>
+        <div class="header w-full flex flex-row items-center">
+            <div class="texte flex flex-col">
+                <h1 class="top-0 left-0 font-[700] text-[24px] leading-[28px] text-[#484848]">
+                    Destinations Airbnb Plus à la Une
+                </h1>
+                <p class="w-[577px] mt-[8px] font-[300] text-[16px] leading-[19px] text-[#484848]">
+                    Voyages de plusieurs jours organisés par des experts locaux avec activités, repas et logements compris
+                </p>
+            </div>
+            <NuxtLink to="seeAll"
+                class="border-[1px] border-[#484848] rounded-[20px] ml-auto p-[10px]
+                hover:text-black hover:stroke-black text-[#484848] stroke-[#484848] hover:border-black transition ease-in-out delay-[30ms]">
+                <button class="
+                        w-full
+                        flex flex-row items-center text-center">
+                    <h1 class="
+                            font-[700] text-[16px] leading-[19px]">
+                        See all products
+                    </h1>
+                </button>
+            </NuxtLink>
+        </div>
+
         <div class="cardHolder w-full mt-[32px] grid grid-cols-3 gap-[16px]">
             <div class="card w-[391px] h-[294px]" v-for="item in data.products" :key="item.id">
                 <div class="cardContent flex flex-col w-full h-full item-start">
@@ -22,13 +39,13 @@
                     <div class="texts flex flex-col items-start w-full mt-[10px]">
                         <div class="row01 grid grid-cols-5 gap-[10px] w-full">
                             <div class="w-full h-[28px] col-span-2 flex flex-row
-                                items-center justify-center ">
-                                <button class="hover:border-[#FF5A5F] hover:text-[#FF5A5F] transition ease-in-out delay-[30ms]
-                                w-full h-full border-[1px] border-black rounded-[4px] text-[$484848]">
+                                    items-center justify-center ">
+                                <div class="flex flex-row items-center justify-center
+                                    w-full h-full border-[1px] border-black rounded-[4px] text-[$484848]">
                                     <p class="font-[700] text-[10px] leading-[12px] uppercase">
                                         {{ item.category }}
                                     </p>
-                                </button>
+                                </div>
 
                             </div>
                             <div class="col-span-2 text-[#767676]">
@@ -52,22 +69,6 @@
                                 <p class="text-[20px] mb-[8px]">
                                     ${{ item.price }}
                                 </p>
-                            </div>
-
-                            <div class="w-full ">
-                                <button class="hover:bg-white hover:border-[#FF5A5F] hover:shadow-lg hover:text-[#FF5A5F] hover:stroke-[#FF5A5F] transition ease-in-out delay-[30ms]
-                                    flex flex-col items-center w-full p-[5px] border-[1px] border-[#FF5A5F] rounded-[4px] bg-[#FF5A5F] text-white
-                                        stroke-white">
-                                    <div class="flex flex-row items-center justify-center w-full ">
-                                        <p class="text-[15px] leading-[18px]">
-                                            Add to cart
-                                        </p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" class="w-5 h-5">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                                        </svg>
-                                    </div>
-                                </button>
                             </div>
                         </div>
                     </div>

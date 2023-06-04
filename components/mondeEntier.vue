@@ -9,7 +9,17 @@
                     Voyages de plusieurs jours organisés par des experts locaux avec activités, repas et logements compris
                 </p>
             </div>
-            
+            <NuxtLink to="seeAll" class="border-[1px] border-[#484848] rounded-[20px] ml-auto p-[10px]
+            hover:text-black hover:stroke-black text-[#484848] stroke-[#484848] hover:border-black transition ease-in-out delay-[30ms]">
+                <button class="
+                    w-full
+                    flex flex-row items-center text-center">
+                    <h1 class="
+                        font-[700] text-[16px] leading-[19px]">
+                        See all products
+                    </h1>
+                </button>
+            </NuxtLink>
         </div>
 
 
@@ -22,13 +32,11 @@
                     </NuxtLink>
                     <div class="texts flex flex-col items-start w-full">
                         <div class="txt01 grid grid-cols-5 justify-center mt-[8px] w-full">
-                            <button
-                                class="col-span-2 border-[1px] border-black rounded-[2px] box-border w-full h-[30px]
-                                                                hover:border-[1px] hover:border-[#FF5A5F] hover:text-[#FF5A5F] text-black transition ease-in-out delay-[30ms]">
+                            <div class="col-span-2 border-[1px] border-black rounded-[2px] box-border w-full h-[30px] flex flex-row items-center justify-center">
                                 <p class="text-center font-[700] text-[10px] leading-[12px] uppercase">
                                     {{ item.category }}
                                 </p>
-                            </button>
+                            </div>
                             <div class="col-span-2 flex flex-row items-center w-full h-full ml-[13px]">
                                 <p class=" font-[400] text-[12px] leading-[14px] text-[#767676]">
                                     {{ item.title }}
@@ -47,45 +55,10 @@
                             ${{ item.price }}
                         </p>
 
-                        <div class="w-full mt-[8px]">
-                            <button class="w-full">
-                                <div
-                                    class="
-                                    w-full h-[28px]
-                                    flex flex-row items-center justify-center
-                                    hover:text-[#FF5A5F] hover:stroke-[#FF5A5F] hover:bg-white
-                                    text-white stroke-white bg-[#FF5A5F] border-[1px] border-[#FF5A5F] rounded-[4px]
-                                    transition ease-in-out delay-[30ms]">
-                                    <p class="text-[14px] leading-[18px] font-[300]">
-                                        Add to cart
-                                    </p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" class="w-5 h-5">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                                    </svg>
-                                </div>
-                            </button>
-                        </div>
-
                     </div>
                 </div>
             </div>
-            <NuxtLink to="seeAll" class="w-[85px]">
-                <div class="
-                w-[85px]
-                hover:text-black hover:stroke-black 
-                text-[#484848] stroke-[#484848]
-                flex flex-row items-center text-center">
-                    <h1 class="
-                    font-[700] text-[16px] leading-[19px]">
-                        See more
-                    </h1>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                        stroke="currentColor" class="w-3 h-3 ml-[5px]">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                </div>
-            </NuxtLink>
+            
         </div>
     </div>
 </template>
