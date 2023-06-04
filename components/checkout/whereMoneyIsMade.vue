@@ -23,11 +23,11 @@
                                 $
                             </p>
                             <p>
-                                {{ item.price }}
+                                {{ rawTotal }}
                             </p>
                         </div>
                     </div>
-                    
+
                     <div class=" w-full grid grid-cols-4 h-full">
                         <div class="w-full col-span-2 h-full flex items-center justify-start">
                             total :
@@ -131,7 +131,7 @@ export default {
             //the item has entered the cart millions must pay
             let priceArray = []
             for (let i = 0; i < arrayOfItems.length; i++) {
-                priceArray.push(arrayOfItems[i].price)
+                priceArray.push(arrayOfItems[i].price * arrayOfItems[i].qty)
                 this.rawTotal = priceArray.reduce((partialSum, a) => partialSum + a, 0);
                 console.log(this.rawTotal)
             }
