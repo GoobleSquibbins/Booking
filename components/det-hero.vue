@@ -26,20 +26,20 @@
 
             <div class="miniImg grid grid-cols-2 gap-[16px] w-full h-full">
                 <div class="w-full h-[153.11px] bg-black">
-                    <img :src="item.images[0]"
+                    <img :src="item.images[0] !== undefined ? item.images[0] : item.thumbnail"
                         class="text-whtie object-cover opacity-100 hover:opacity-80 transition ease-in-out delay-[30ms] h-full w-full" alt="Image Unavailable">
                 </div>
                 <div class="w-full h-[153.11px] bg-black rounded-tr-[10px]">
-                    <img :src="item.images[1]"
+                    <img :src="item.images[1] !== undefined ? item.images[1] : item.thumbnail"
                         class="text-whtie object-cover opacity-100 hover:opacity-80 transition ease-in-out delay-[30ms] h-full w-full rounded-tr-[10px]"
                         alt="Image Unavailable">
                 </div>
                 <div class="w-full h-[153.11px] bg-black">
-                    <img :src="item.images[2]"
+                    <img :src="item.images[2] !== undefined ? item.images[2] : item.thumbnail"
                         class="text-whtie object-cover opacity-100 hover:opacity-80 transition ease-in-out delay-[30ms] h-full w-full" alt="Image Unavailable">
                 </div>
                 <div class="w-full h-[153.11px] bg-black rounded-br-[10px]">
-                    <img :src="item.images[3]"
+                    <img :src="item.images[3] !== undefined ? item.images[3] : item.thumbnail"
                         class="text-whtie object-cover opacity-100 hover:opacity-80 transition ease-in-out delay-[30ms] h-full w-full rounded-br-[10px]"
                         alt="Image Unavailable">
                 </div>

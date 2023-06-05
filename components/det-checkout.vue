@@ -102,7 +102,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </template>
@@ -152,6 +151,7 @@ export default {
                     console.log(dataProduct)
                     // this.cart = JSON.parse(localStorage.getItem("a"))
                     console.log('im going insane')
+                    window.location.href = "/checkout"
                 } else {
                     let stuffAlreadyInside = JSON.parse(localStorage.getItem("a"))
                     console.log(stuffAlreadyInside + ' cheese')
@@ -163,6 +163,7 @@ export default {
                     }
                     console.log(newArray + ' poof')
                     if (!newArray.includes(dataProduct.id)) {
+                        console.log(stuffAlreadyInside.id)
                         dataProduct.cartId = stuffAlreadyInside.length + 1
                         stuffAlreadyInside.push(dataProduct)
                         localStorage.setItem("a", JSON.stringify(stuffAlreadyInside));
@@ -187,6 +188,7 @@ export default {
                         console.log('shid and camed')
                     }
                     console.log('im going insaner')
+                    window.location.href = "/seeAll"
                 }
                 console.log(dataProduct.id + ' cheese ' + dataProduct.qty)
             }

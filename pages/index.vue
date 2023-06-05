@@ -1,13 +1,13 @@
 <template>
     <div class="flex flex-col items-center pb-[100px]">
         <div class="w-full md:w-[1366px] flex flex-col items-center relative">
-            <div class="h-[750px] w-[1366px] relative">
+            <!-- <div class="h-[750px] w-[1366px] relative">
                 <Hero />
                 <Header />
-            </div>
+            </div> -->
 
             <Explorer />
-            <Hebergement />
+            <!-- <Hebergement /> -->
             <Aventurez />
             <MondeEntier />
             <BienNotees />

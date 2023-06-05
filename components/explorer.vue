@@ -1,5 +1,5 @@
 <template>
-    <div class="daFont flex flex-col items-start w-[1208px] mt-[88px]">
+    <div class="daFont flex flex-col items-start w-[1208px] mt-[30px]">
         <h1 class="w-[181px] h-[28px] not-italic font-[700] text-[24px] leading-[28px] text-[#484848] mb-[24px]">
             Explorer Airbnb
         </h1>

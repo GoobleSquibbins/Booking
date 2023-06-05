@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[1208px]">
+    <div class="w-[1340px]">
         <div class="header w-full border-b-[1px] border-[#484848] flex flex-row items-center">
             <div class="flex flex-col">
                 <h1 class="font-[700] text-[28px] leading-[32px] text-[#484848] uppercase">
