@@ -1,16 +1,16 @@
 <template>
-    <div class="daFont w-[1208px] mt-[88px]">
-        <div class="header w-full flex flex-row items-center">
+    <div class="daFont md:w-[1208px] w-full md:mt-[88px] mt-[50px]">
+        <div class="header w-full flex md:flex-row flex-col md:items-center items-start">
             <div class="texte flex flex-col">
-                <h1 class="top-0 left-0 font-[700] text-[24px] leading-[28px] text-[#484848]">
+                <h1 class="md:ml-0 ml-[5px] font-[700] text-[24px] leading-[28px] text-[#484848]">
                     Destinations Airbnb Plus à la Une
                 </h1>
-                <p class="w-[577px] mt-[8px] font-[300] text-[16px] leading-[19px] text-[#484848]">
+                <p class="md:w-[577px] w-full md:ml-0 ml-[5px] mt-[8px] font-[300] text-[16px] leading-[19px] text-[#484848]">
                     Voyages de plusieurs jours organisés par des experts locaux avec activités, repas et logements compris
                 </p>
             </div>
             <NuxtLink to="seeAll"
-                class="border-[1px] border-[#484848] rounded-[20px] ml-auto p-[10px]
+                class="border-[1px] border-[#484848] rounded-[20px] ml:ml-auto ml-[5px] md:mt-0 mt-[10px] p-[10px]
                         hover:text-black hover:stroke-black text-[#484848] stroke-[#484848] hover:border-black transition ease-in-out delay-[30ms]">
                 <button class="
                                 w-full
@@ -23,7 +23,7 @@
             </NuxtLink>
         </div>
 
-        <div class="cardHolder w-full mt-[32px] grid grid-cols-3 gap-[16px]">
+        <div class="cardHolder md:overflow-x-hidden overflow-x-scroll w-full mt-[32px] md:grid flex md:grid-cols-3 items-center md:pl-0 pl-[5px] md:pr-0 pr-[5px] gap-[16px]">
             <div class="card w-[391px] h-[294px]" v-for="item in data.products" :key="item.id">
                 <div class="cardContent flex flex-col w-full h-full item-start">
 

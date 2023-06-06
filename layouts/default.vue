@@ -1,7 +1,21 @@
 <template>
-    <div class="w-full flex flex-col items-center mt-[10px]">
-        <div class="w-[1340px] flex flex-row items-center mt-[10px] relative">
-            <div class="border-[1px] border-black rounded-[20px] w-[300px] p-[10px] flex flex-row items-center">
+    <div class="w-full flex flex-col items-center md:mt-[10px] mt-[5px]">
+        <div class="md:w-[1340px] w-full flex flex-row items-center mt-[10px] relative">
+
+            <NuxtLink to="/login">
+                <button id="loginBtn"
+                    class="md:absolute flex md:right-[115px] md:ml-0 ml-[5px] top-[5px] rounded-[20px] text-black hover:text-[#FF5A5F] hover:border-[#FF5A5F] transition ease-in-out delay-[30ms] p-[5px] border-[1px] border-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+                    </svg>
+
+                </button>
+            </NuxtLink>
+
+            <div
+                class="border-[1px] border-black rounded-[20px] md:w-[500px] w-full md:ml-0 ml-[10px] md:p-[10px] p-[5px] flex flex-row items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                     <path fill-rule="evenodd"
                         d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
@@ -11,18 +25,11 @@
                     v-on:keyup.enter="searchItems">
             </div>
 
-            <NuxtLink to="/login">
-                <button id="loginBtn"
-                    class="absolute right-[115px] top-[5px] rounded-[20px] text-black hover:text-[#FF5A5F] hover:border-[#FF5A5F] transition ease-in-out delay-[30ms] w-[70px] h-[35px] p-[5px] border-[1px] border-black">
-                    <h1 class="font-[500] text-[14px] leading-[18px] ">
-                        LOGIN
-                    </h1>
-                </button>
-            </NuxtLink>
 
-            <div
-                class="ml-auto w-[100px] flex flex-col items-end justify-center relative ">
-                <button @click="showC" class="flex flex-row items-center justify-center w-full p-[5px] hover:border-[#FF5A5F] text-black hover:text-[#FF5A5F] border-[1px] border-black rounded-[30px] transition ease-in-out delay-[30ms]">
+
+            <div class="md:ml-auto ml-[10px] md:mr-0 mr-[10px] w-[100px] flex flex-col items-end justify-center relative ">
+                <button @click="showC"
+                    class="flex flex-row items-center justify-center w-full p-[5px] hover:border-[#FF5A5F] text-black hover:text-[#FF5A5F] border-[1px] border-black rounded-[30px] transition ease-in-out delay-[30ms]">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -35,7 +42,8 @@
 
                 <div id="goToCheckout"
                     class="hidden payEverything z-[1201] absolute top-[540px] w-[290px] right-[5px] h-[30px]">
-                    <button @click="checkout" class="bg-[#FF5A5F] rounded-[4px] text-center p-[5px] w-full h-full border-[1px] border-[#FF5A5F] text-white hover:bg-white hover:border-[#FF5A5F] hover:text-[#FF5A5F] transition ease-in-out delay-[30ms]">
+                    <button @click="checkout"
+                        class="bg-[#FF5A5F] rounded-[4px] text-center p-[5px] w-full h-full border-[1px] border-[#FF5A5F] text-white hover:bg-white hover:border-[#FF5A5F] hover:text-[#FF5A5F] transition ease-in-out delay-[30ms]">
                         <div class="flex flex-row items-center justify-center w-full h-full">
                             Go to checkout
                         </div>
@@ -45,7 +53,7 @@
                 </div>
 
                 <div id="cart" class="cart hidden pt-[5px] z-[1200] w-[300px] h-[525px] border-[1px] border-black shadow-2xl bg-white absolute top-[50px] rounded-[4px]
-                        overflow-y-scroll  flex-col items-center">
+                            overflow-y-scroll  flex-col items-center">
                     <div v-for="item in cart"
                         class="w-[280px] grid grid-cols-5 gap-[5px] justify-start border-b-[1px] border-black m-[5px]">
                         <NuxtLink :to="'/details/' + item.id">
@@ -84,13 +92,13 @@
         </div>
 
         <div
-            class="catHolder flex flex-row items-center w-[1340px]  gap-[10px] h-[50px] overflow-x-scroll mt-[20px] pb-[10px]">
+            class="catHolder flex flex-row items-center md:w-[1340px] w-[95%] md:ml-0 ml-[20px] md:mr-0 mr-[25px] gap-[10px] h-[50px] overflow-x-scroll md:mt-[20px] mt-[10px] md:pb-[10px] pb-[5px]">
             <div class="w-full h-full">
                 <NuxtLink to="/seeAll" class="w-full h-full">
                     <button class="hover:border-[#FF5A5F] hover:text-[#FF5A5F]
-                                                            focus:border-[#FF5A5F] focus:text-white focus:bg-[#FF5A5F] focus:outline-none
-                                                            w-[150px] flex flex-row justify-center items-center h-full text-black border-[1px] border-black rounded-[20px]
-                                                            transition ease-in-out delay-[30ms]">
+                                                                focus:border-[#FF5A5F] focus:text-white focus:bg-[#FF5A5F] focus:outline-none
+                                                                w-[150px] flex flex-row justify-center items-center h-full text-black border-[1px] border-black rounded-[20px]
+                                                                transition ease-in-out delay-[30ms]">
 
                         <p class="font-[500] text-[12px] leading-[14px]  uppercase">
                             All item
@@ -316,5 +324,4 @@ export default {
 .cart::-webkit-scrollbar-thumb {
     background: #FF5A5F;
     border-radius: 4px;
-}
-</style>
+}</style>

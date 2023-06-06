@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center pb-[100px]">
+    <div class="flex flex-col items-center pb-[100px] overflow-hidden">
         <div class="w-full md:w-[1366px] flex flex-col items-center relative">
             <!-- <div class="h-[750px] w-[1366px] relative">
                 <Hero />

@@ -1,16 +1,16 @@
 <template>
-    <div id="exp" class="daFont w-[1208px] h-[469px] left-[80px] mt-[88px]">
-        <div class="header flex flex-row items-start w-full">
+    <div id="exp" class="daFont md:w-[1208px] w-full h-[469px] left-[80px] md:mt-[88px] mt-[25px]">
+        <div class="header flex md:flex-row flex-col items-start w-full">
             <div class="texts flex flex-col">
-                <h1 class="font-[700] text-[24px] leading-[28px] text-[#484848]">
+                <h1 class="font-[700] text-[24px] md:ml-0 ml-[5px] leading-[28px] text-[#484848]">
                     Expériences très bien notées
                 </h1>
-                <p class="w-[577px] mt-[8px] font-[300] text-[16px] leading-[19px] text-[#484848]">
+                <p class="md:w-[577px] w-full mt-[8px] font-[300] md:ml-0 ml-[5px] text-[16px] leading-[19px] text-[#484848]">
                     Voyages de plusieurs jours organisés par des experts locaux avec activités, repas et logements compris
                 </p>
             </div>
             <NuxtLink to="seeAll"
-                class="border-[1px] border-[#484848] rounded-[20px] ml-auto p-[10px]
+                class="border-[1px] border-[#484848] rounded-[20px] md:ml-auto ml-[5px] md:mt-0 mt-[10px] p-[10px]
                     hover:text-black hover:stroke-black text-[#484848] stroke-[#484848] hover:border-black transition ease-in-out delay-[30ms]">
                 <button class="
                             w-full
@@ -23,8 +23,8 @@
             </NuxtLink>
         </div>
 
-        <div class="cardHolder w-full grid grid-cols-6 gap-[16px] mt-[24px]">
-            <div class="card w-[188px] h-[240px] rounded-[4px]" v-for="item in data.products" :key="item.id">
+        <div class="cardHolder w-full md:grid flex md:grid-cols-6 items-center md:pl-0 pl-[5px] md:pr-0 pr-[5px] gap-[16px] md:mt-[24px] mt-[10px] md:overflow-visible overflow-x-scroll">
+            <div class="card w-[188px] md:h-[240px] h-full rounded-[4px]" v-for="item in data.products" :key="item.id">
                 <div class="cardContent flex flex-col items-start">
 
                     <Swiper class="groupSwiper w-[188px] h-[240px] hover:shadow-2xl hover:shadow-[#335b8f85] transition ease-in-out delay-[30ms]"
@@ -96,5 +96,18 @@ export default {
 
 .daFont {
     font-family: 'Roboto', sans-serif;
+}
+
+.cardHolder::-webkit-scrollbar {
+    height: 5px;
+}
+
+.cardHolder::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.cardHolder::-webkit-scrollbar-thumb {
+    background: #FF5A5F;
+    border-radius: 4px;
 }
 </style>
