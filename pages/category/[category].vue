@@ -182,7 +182,7 @@ export default {
 
             }
             console.log(currCategory)
-
+            window.location.href = "/notix"
         }
         ,
         selCat() {

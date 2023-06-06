@@ -182,7 +182,7 @@ export default {
 
             }
 
-
+            window.location.href = "/notix"
         }
     }
     ,

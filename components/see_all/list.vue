@@ -1,5 +1,5 @@
 <template>
-    <div class="h-[900px]">
+    <div class="relative">
         <div class="grid grid-cols-4 gap-[16px] justify-start w-[1340px] pb-[80px]">
             <div v-for=" item in filteredItems.products" class="w-full flex flex-col items-start relative">
                 <Swiper class="groupSwiper w-[323px] h-[200px]"
@@ -84,12 +84,7 @@
                     <div class="w-full mt-[8px]">
                         <button class="w-full" @click="addToCart(item.id, qty)">
                             <div
-                                class="
-                                                                                                                                                                                                            w-full h-[28px]
-                                                                                                                                                                                                            flex flex-row items-center justify-center
-                                                                                                                                                                                                            hover:text-[#FF5A5F] hover:stroke-[#FF5A5F] hover:bg-white
-                                                                                                                                                                                                            text-white stroke-white bg-[#FF5A5F] border-[1px] border-[#FF5A5F] rounded-[4px]
-                                                                                                                                                                                                            transition ease-in-out delay-[30ms]">
+                                class=" w-full h-[28px] flex flex-row items-center justify-center hover:text-[#FF5A5F] hover:stroke-[#FF5A5F] hover:bg-white text-white stroke-white bg-[#FF5A5F] border-[1px] border-[#FF5A5F] rounded-[4px] transition ease-in-out delay-[30ms]">
                                 <p class="text-[14px] leading-[18px] font-[300]">
                                     Add to cart
                                 </p>
@@ -99,6 +94,8 @@
                                 </svg>
                             </div>
                         </button>
+
+
                     </div>
                 </div>
             </div>
@@ -159,6 +156,7 @@ export default {
         }
         ,
         async addToCart(id, qty) {
+            document.getElementById('Emptycart').style.display = "none";
             if (this.showCart == true) {
                 document.getElementById('Emptycart').style.display = "block";
                 document.getElementById('goToCheckout').style.display = "block";
@@ -209,6 +207,7 @@ export default {
                 console.log(dataProduct)
 
             }
+            window.location.href = "/notix"
 
         }
         ,
@@ -247,7 +246,7 @@ export default {
             this.catIt = data
             if (this.search === '') {
                 if (this.pickedCat === '') {
-                    let { data: data } = await useFetch('https://dummyjson.com/products?limit=0');
+                    let { data: data } = await useFetch('https://dummyjson.com/products');
                     this.filteredItems = data
                 } else {
                     let { data: data } = await useFetch('https://dummyjson.com/products/category/' + this.pickedCat);
