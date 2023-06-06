@@ -1,10 +1,10 @@
 <template>
     <div class="h-[900px] w-full flex flex-col items-center">
-        <div class="grid grid-cols-4 gap-[16px] justify-start w-[1340px] mt-[15px] pb-[80px]">
+        <div class="grid md:grid-cols-4 grid-cols-2 md:gap-[16px] gap-[10px] justify-start md:w-[1340px] w-full md:pl-0 pl-[10px] md:pr-0 pr-[10px] mt-[15px] pb-[80px]">
             <div v-for=" item in items.products" class="w-full flex flex-col items-start relative">
 
-                <div class="swiper w-[323px] h-[200px]">
-                    <Swiper class="groupSwiper w-[323px] h-[200px]"
+                <div class="swiper md:w-[323px] w-full h-[200px]">
+                    <Swiper class="groupSwiper md:w-[323px] w-full h-[200px]"
                         :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperPagination, SwiperNavigation]"
                         :slides-per-view="1" :loop="false" :effect="'creative'" :navigation="true" :hashNavigation="{
                             watchState: true,
@@ -17,10 +17,10 @@
         translate: ['100%', 0, 0],
     },
 }">
-                        <SwiperSlide v-for="image in item.images" class="w-[323px] h-[200px]">
-                            <NuxtLink :to="'/details/' + item.id" class="w-[323px] h-[200px]">
+                        <SwiperSlide v-for="image in item.images" class="md:w-[323px] w-full h-[200px]">
+                            <NuxtLink :to="'/details/' + item.id" class="md:w-[323px] w-full h-[200px]">
                                 <img :src="image" alt=""
-                                    class="w-[323px] h-[200px] object-cover duration-1000 rounded-[4px]">
+                                    class="md:w-[323px] w-full h-[200px] object-cover duration-1000 rounded-[4px]">
                             </NuxtLink>
                         </SwiperSlide>
                     </Swiper>

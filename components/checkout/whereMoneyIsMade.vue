@@ -5,31 +5,31 @@
                 <div class="w-full border-b-[1px] border-black">
                     <div v-for="item in cart" class="w-full h-full grid grid-cols-4">
                         <div
-                            class="w-full col-span-2 h-full font-[300] text-[14px] leading-[18px] flex items-center justify-start">
+                            class="w-full col-span-2 h-full font-[300] md:text-[14px] text-[10px] md:leading-[18px] leading-[14px] flex items-center justify-start">
                             <p class="mr-[5px]">
                                 {{ item.cartId }}.
                             </p>
-                            <p class="font-[400] text-[15px] leading-[17px]">
+                            <p class="font-[400] md:text-[14px] text-[10px] md:leading-[18px] leading-[14px]">
                                 {{ item.title }}
                             </p>
                         </div>
                         <div class="w-full h-full flex items-center justify-start">
-                            <p>
+                            <p class="font-[400] md:text-[14px] text-[10px] md:leading-[18px] leading-[14px]">
                                 Qty : {{ item.qty }}
                             </p>
                         </div>
                         <div class="w-full h-full float-right flex items-center justify-end">
-                            <p class="mr-auto">
+                            <p class="mr-auto font-[400] md:text-[14px] text-[10px] md:leading-[18px] leading-[14px]">
                                 $
                             </p>
-                            <p>
+                            <p class="font-[400] md:text-[14px] text-[10px] md:leading-[18px] leading-[14px]">
                                 {{ item.price * item.qty }}
                             </p>
                         </div>
                     </div>
 
-                    <div class=" w-full grid grid-cols-4 h-full">
-                        <div class="w-full col-span-2 h-full flex items-center justify-start">
+                    <div class=" w-full grid grid-cols-4 h-full font-[400] md:text-[14px] text-[10px] md:leading-[18px] leading-[14px]">
+                        <div class="w-full col-span-2 h-full flex items-center justify-start ">
                             total :
                         </div>
                         <div>
@@ -48,7 +48,7 @@
 
 
 
-                <div class="tax grid grid-cols-4 w-full">
+                <div class="tax grid grid-cols-4 w-full font-[400] md:text-[14px] text-[10px] md:leading-[18px] leading-[14px]">
                     <div class="w-full col-span-3">
                         <p>
                             10% Tax :
@@ -64,7 +64,7 @@
                     </div>
                 </div>
 
-                <div class="svcFee grid grid-cols-4 w-full">
+                <div class="svcFee grid grid-cols-4 w-full font-[400] md:text-[14px] text-[10px] md:leading-[18px] leading-[14px]">
                     <div class="w-full col-span-3">
                         <p>
                             15% Service Fee :
@@ -80,7 +80,7 @@
                     </div>
                 </div>
 
-                <div class="subTotal grid grid-cols-4 w-full">
+                <div class="subTotal grid grid-cols-4 w-full font-[400] md:text-[14px] text-[10px] md:leading-[18px] leading-[14px]">
                     <div class="w-full col-span-3">
                         <p>
                             Sub Total :
@@ -99,23 +99,23 @@
             <div class="w-full">
                 <div id="login_form"
                     class="login_form flex flex-col items-start p-[10px] justify-center w-full mt-[10px] border-[1px] rounded-[4px] border-black">
-                    <h1 class="font-[500] text-[16px] leading-[19px]">
+                    <h1 class="font-[500] md:text-[16px] text-[12px] md:leading-[19px] leading-[14px]">
                         LOGIN TO FINISH TRANSACTION
                     </h1>
                     <div class="flex flex-col items-start w-full mt-[10px]">
-                        <label class="font-[400] text-[14px] leading-[16px]">USERNAME</label>
+                        <label class="font-[400] md:text-[14px] text-[12px] leading-[16px]">USERNAME</label>
                         <input v-model="username" type="text"
-                            class="mt-[5px] w-full h-[50px] border-[1px] border-[#767676] rounded-[4px] focus:outline-none p-[10px]">
+                            class="mt-[5px] w-full md:h-[50px] h-[25px] border-[1px] border-[#767676] rounded-[4px] focus:outline-none p-[10px]">
                     </div>
                     <div class="flex flex-col items-start w-full mt-[10px]">
-                        <label class="font-[400] text-[14px] leading-[16px]">PASSWORD</label>
+                        <label class="font-[400] md:text-[14px] text-[12px] leading-[16px]">PASSWORD</label>
                         <input v-model="password" type="text"
-                            class="mt-[5px] w-full h-[50px] border-[1px] border-[#767676] rounded-[4px] focus:outline-none p-[10px]">
+                            class="mt-[5px] w-full md:h-[50px] h-[25px] border-[1px] border-[#767676] rounded-[4px] focus:outline-none p-[10px]">
                     </div>
                     <div class="flex flex-col items-start w-full mt-[10px]">
                         <button @click="login"
-                            class="w-full border-[1px] border-[#FF5A5F] bg-[#FF5A5F] p-[5px] rounded-[4px] text-white hover:bg-white hover:text-[#FF5A5F] transition ease-in-out delay-[30ms]">
-                            <h1 class="font-[500] text-[16px] leading-[21px]">
+                            class="w-full border-[1px] border-[#FF5A5F] bg-[#FF5A5F] md:p-[5px] p-0 rounded-[4px] text-white hover:bg-white hover:text-[#FF5A5F] transition ease-in-out delay-[30ms]">
+                            <h1 class="font-[500] md:text-[16px] text-[12px] md:leading-[21px] leading-[14px]">
                                 LOGIN
                             </h1>
                         </button>
@@ -124,7 +124,7 @@
             </div>
             <div id="smbt_order" class="submit_order w-full mt-[10px] hidden">
                 <button @click="order"
-                    class=" w-full h-[40px] border-[1px] border-[#FF5A5F] hover:text-[#FF5A5F] hover:bg-white transition ease-in-out delay-[30ms] rounded-[4px] text-white bg-[#FF5A5F]">
+                    class=" w-full md:h-[40px] h-[20px] border-[1px] border-[#FF5A5F] hover:text-[#FF5A5F] hover:bg-white transition ease-in-out delay-[30ms] rounded-[4px] text-white bg-[#FF5A5F]">
                     <h1 class="font-[500] text-[16px] leading-[21px]">
                         ORDER
                     </h1>
@@ -132,7 +132,7 @@
             </div>
         </div>
         <div id="msgSccss"
-            class="hidden absolute flex-col items-center w-[500px] bg-white border-[1px] p-[10px] border-black left-[-420px] top-[10px] shadow-2xl rounded-[12px]">
+            class="hidden absolute flex-col items-center md:w-[500px] w-[300px] bg-white border-[1px] p-[10px] border-black md:left-[-420px] left-[-145%] top-[10px] shadow-2xl rounded-[12px]">
             <div class="flex w-full items-center relative justify-center">
                 <h1>
                     ORDER SUCCESS
@@ -145,10 +145,10 @@
                 </button>
             </div>
             <div class="w-full flex items-center justify-center">
-                <img class="h-[300px] w-[300px]" src="https://media.istockphoto.com/id/490988025/id/foto/muda-bahagia-positif-remaja-pria-gesturing-ok.jpg?s=1024x1024&w=is&k=20&c=X5hob1qoslwN7tvBcyxVd0VjHOWc9BAA0EmwKyMNh4g=" alt="">
+                <img class="md:h-[300px] h-[150px] md:w-[300px] w-[150px]" src="https://media.istockphoto.com/id/490988025/id/foto/muda-bahagia-positif-remaja-pria-gesturing-ok.jpg?s=1024x1024&w=is&k=20&c=X5hob1qoslwN7tvBcyxVd0VjHOWc9BAA0EmwKyMNh4g=" alt="">
             </div>
-            <div class="w-[50%] mt-[10px]">
-                <p>
+            <div class="md:w-[50%] w-[70%] mt-[10px]">
+                <p class="md:text-[16px] text-[12px]">
                     We will send your order of items right at your doorstep, just don't ask how we know your address...
                 </p>
             </div>

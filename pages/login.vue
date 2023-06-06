@@ -1,6 +1,6 @@
 <template>
     <div id="form" class="w-full flex flex-col items-center mt-[112px]">
-        <div class="w-[500px] border-[1px] border-black rounded-[12px] bg-white flex flex-col items-center">
+        <div class="md:w-[500px] w-[300px] border-[1px] border-black rounded-[12px] bg-white flex flex-col items-center">
             <div class="p-[10px] w-full">
                 <h1 class="text-center font-[400] text-[24px] leading-[28px] w-full">
                     LOGIN

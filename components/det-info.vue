@@ -3,32 +3,35 @@
         function (i) { return i.id == productId })" class="w-full">
         <div class="head flex flex-row items-center w-full">
             <h1 class="font-[700] text-[24px] leading-[28px] text-[#484848]">
-               Product by : {{ item.brand }}
+                Product by : {{ item.brand }}
             </h1>
             <div class="img w-[50px] h-[50px] ml-auto">
-                <img class="float-right w-[50px] h-[50px] rounded-[50%] outline outline-[1px] outline-black outline-offset-[3px]" :src="item.thumbnail" alt="">
+                <img class="float-right w-[50px] h-[50px] rounded-[50%] outline outline-[1px] outline-black outline-offset-[3px]"
+                    :src="item.thumbnail" alt="">
             </div>
         </div>
         <div class="facility grid grid-cols-3 gap-[16px] w-full mt-[20px] border-b-[1px] pb-[20px] border-[#767676]">
-            <div class="card01 w-full bg-white border-[1px] border-[#767676] rounded-[4px] h-[60px] shadow-lg
-                            flex flex-row items-center p-[10px] text-[16px] leading-[19px] font-[300] text-[#484848]">
+            <div
+                class="card01 w-full bg-white border-[1px] border-[#767676] rounded-[4px] md:h-[60px] h-[30px] shadow-lg
+                                flex flex-row items-center p-[10px] md:text-[16px] text-[12px] md:leading-[14px] leading-[14px] font-[300] text-[#484848] justify-center text-center">
                 <p>
-                    Ratings : {{ item.rating }}
+                    {{ item.rating }}
                 </p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#484848" class="w-3 h-3 justify-center items-center ml-[5px]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#484848"
+                    class="w-3 h-3 justify-center items-center ml-[5px]">
                     <path fill-rule="evenodd"
                         d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                         clip-rule="evenodd" />
                 </svg>
             </div>
-            <div class="card02 w-full bg-white border-[1px] border-[#767676] rounded-[4px] h-[60px] shadow-lg
-                        flex flex-row items-center p-[10px] text-[16px] leading-[19px] font-[300] text-[#484848]">
+            <div class="card02 w-full bg-white border-[1px] border-[#767676] rounded-[4px] md:h-[60px] h-[30px] shadow-lg
+                            flex flex-row items-center p-[10px] md:text-[16px] text-[12px] md:leading-[19px] leading-[14px] font-[300] text-[#484848] justify-center">
                 <p>
-                    Category : {{ item.category }}
+                    {{ item.category }}
                 </p>
             </div>
-            <div class="card03 w-full bg-white border-[1px] border-[#767676] rounded-[4px] h-[60px] shadow-lg
-                    flex flex-row items-center p-[10px] text-[16px] leading-[19px] font-[300] text-[#484848]">
+            <div class="card03 w-full bg-white border-[1px] border-[#767676] rounded-[4px] md:h-[60px] h-[30px] shadow-lg
+                        flex flex-row items-center p-[10px] md:text-[16px] text-[12px] md:leading-[19px] leading-[14px] font-[300] text-[#484848] justify-center">
                 <p>
                     Stock : {{ item.stock }}
                 </p>
@@ -45,18 +48,19 @@
             <div class="hostCardHolder flex flex-col items-center bg-[#ededed] w-full rounded-[12px] mt-[24px]">
                 <div
                     class="hostCard grid grid-cols-3 gap-[5px] bg-white rounded-[20px] w-[60%] mt-[30px] mb-[30px] shadow-xl">
-                    <div class="w-full hostProfile flex flex-col items-center col-span-2 p-[75px]">
-                        <img class="h-[100px] w-[100px] rounded-[50%] outline outline-[1px] outline-black outline-offset-[5px]" :src="item.thumbnail" alt="">
+                    <div class="w-full hostProfile flex flex-col items-center col-span-2 md:p-[75px] md:mt-0 mt-[30px]">
+                        <img class="md:h-[100px] h-[70px] md:w-[100px] w-[70px] rounded-[50%] outline outline-[1px] outline-black outline-offset-[5px]"
+                            :src="item.thumbnail" alt="">
                         <h1 class="font-[700] text-[24px] leading-[28px] text-[#484848] mt-[15px]">
                             {{ item.title }}
                         </h1>
-                        <p class="font-[300] text-[14px] leading-[18px] text-[#767676] mt-[10px]">
+                        <p class="font-[300] md:pb-0 pb-[10px] text-[14px] leading-[18px] text-[#767676] mt-[10px]">
                             {{ item.category }}
                         </p>
                     </div>
-                    <div class="w-full hostRating flex flex-col items-center p-[25px] justify-center">
-                        <div class="stock w-full flex flex-col items-start border-b-[1px] border-[#767676] pb-[10px]">
-                            <h1 class="font-[700] text-[24px] leading-[28px] text-[#484848]">
+                    <div class="w-full hostRating flex flex-col items-center md:p-[25px] p-[10px] justify-center">
+                        <div class="stock w-full flex flex-col items-start border-b-[1px] border-[#767676] md:pb-[10px] pb-0">
+                            <h1 class="md:font-[700] font-[300] md:text-[24px] text-[21px] md:leading-[28px] leading-[24px] text-[#484848]">
                                 {{ item.stock }}
                             </h1>
                             <p class="font-[300] text-[14px] leading-[21px] text-[#484848] ">
@@ -64,9 +68,9 @@
                             </p>
                         </div>
                         <div
-                            class="rating mt-[10px] w-full flex flex-col items-start border-b-[1px] border-[#767676] pb-[10px]">
+                            class="rating mt-[10px] w-full flex flex-col items-start border-b-[1px] border-[#767676] md:pb-[10px] pb-0">
                             <div class="rateNum flex flex-row items-center">
-                                <h1 class="font-[700] text-[24px] leading-[28px] text-[#484848]">
+                                <h1 class="md:font-[700] font-[300] md:text-[24px] text-[21px] md:leading-[28px] leading-[24px] text-[#484848]">
                                     {{ item.rating }}
                                 </h1>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#484848"
@@ -81,7 +85,7 @@
                             </p>
                         </div>
                         <div class="price mt-[10px] w-full flex flex-col items-start">
-                            <h1 class="font-[700] text-[24px] leading-[28px] text-[#484848]">
+                            <h1 class="md:font-[700] font-[300] md:text-[24px] text-[21px] md:leading-[28px] leading-[24px] text-[#484848]">
                                 $ {{ item.price }}
                             </h1>
                             <p class="font-[300] text-[14px] leading-[21px] text-[#484848] ">

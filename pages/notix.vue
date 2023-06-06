@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col items-center">
-        <div class="w-[500px] relative h-[300px] border-[1px] border-black bg-white mt-[100px] flex flex-col items-center">
+        <div class="md:w-[500px] w-[300px] relative h-[300px] border-[1px] border-black bg-white mt-[100px] flex flex-col items-center">
             <NuxtLink to="/seeAll">
             <button class="absolute right-[10px] top-[10px]">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

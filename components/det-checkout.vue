@@ -3,7 +3,7 @@
         <div v-for="item in stuff.products.filter(
             function (i) { return i.id == productId })"
             class="sticky top-[100px] w-full border-[1px] border-[#767676] rounded-[10px] flex flex-col items-start">
-            <div class="inside p-[30px] w-full">
+            <div class="inside md:p-[30px] p-[10px] w-full">
                 <div class="head flex flex-col items-start w-full">
                     <div class="rating flex flex-row items-center mt-[5px]">
                         <p class="text-[24px] font-[700] leading-[28px] text-[#484848]">
@@ -26,14 +26,14 @@
                         <br>
 
                         <input v-model="itemNum" type="number" @keyup="count()" class="
-                                                        w-full h-[60px] 
+                                                        w-full md:h-[60px] h-[30px]
                                                         border-[1px] border-[#767676] rounded-[4px]
                                                         text-center text-[16px] leading-[19px]" />
 
                     </div>
-                    <div class="submit mt-[20px] w-full">
-                        <NuxtLink to="/notix" class="w-full h-full">
-                            <button @click="addToCart(item.id)" class="bg-[#FF5A5F] text-white p-[10px] rounded-[4px] border-[1px] border-[#FF5A5F]
+                    <div class="submit md:mt-[20px] mt-[10px] w-full">
+                        <NuxtLink to="/notix" class="w-full md:h-full h-[20px]">
+                            <button @click="addToCart(item.id)" class="bg-[#FF5A5F] text-white md:p-[10px] p-0 rounded-[4px] border-[1px] border-[#FF5A5F]
                                                             hover:bg-white hover:border-[1px] hover:border-[#FF5A5F] hover:text-[#FF5A5F]
                                                             transition ease-in-out delay-[30ms] w-full">
                                 <p>
@@ -44,7 +44,7 @@
                         </NuxtLink>
 
                     </div>
-                    <p class="font-[300] text-[12px] leading-[14px] text-[#484848] mt-[25px]">
+                    <p class="font-[300] md:text-[12px] text-[10px] leading-[14px] text-[#484848] mt-[25px]">
                         YOU WON'T BE CHARGED YET
                     </p>
 
@@ -54,12 +54,12 @@
 
                     <div class="row01 w-full grid grid-cols-3 gap-[10px] mt-[10px]">
                         <div class="left w-full col-span-2 flex flex-row items-start justify-start ">
-                            <p class="msg ">
+                            <p class="msg md:text-[21px] text-[12px]">
                                 {{ msg }}
                             </p>
                         </div>
                         <div class="right w-full flex flex-row items-start justify-end ">
-                            <p class="msg">
+                            <p class="msg md:text-[21px] text-[12px]">
                                 {{ totalPriceNoTax }}
                             </p>
                         </div>
@@ -67,12 +67,12 @@
 
                     <div class="row02 w-full grid grid-cols-3 gap-[10px] mt-[5px]">
                         <div class="left col-span-2 w-full flex flex-row items-start justify-start ">
-                            <p class="msg ">
+                            <p class="msg md:text-[21px] text-[12px]">
                                 {{ taxTxt }}
                             </p>
                         </div>
                         <div class="right w-full flex flex-row items-start justify-end ">
-                            <p class="msg ">
+                            <p class="msg md:text-[21px] text-[12px]">
                                 {{ tax }}
                             </p>
                         </div>
@@ -80,12 +80,12 @@
 
                     <div class="row03 w-full grid grid-cols-3 gap-[10px] mt-[5px]">
                         <div class="left col-span-2 w-full flex flex-row items-start justify-start ">
-                            <p class="msg ">
+                            <p class="msg md:text-[21px] text-[12px]">
                                 {{ xtraFeeTxt }}
                             </p>
                         </div>
                         <div class="right w-full flex flex-row items-start justify-end ">
-                            <p class="msg ">
+                            <p class="msg md:text-[21px] text-[12px]">
                                 {{ xtraFee }}
                             </p>
                         </div>
@@ -93,12 +93,12 @@
 
                     <div class="row04 w-full grid grid-cols-3 gap-[10px] mt-[5px]">
                         <div class="left col-span-2 w-full flex flex-row items-start justify-start ">
-                            <p class="msg ">
+                            <p class="msg md:text-[21px] text-[12px]">
                                 {{ subTotalTxt }}
                             </p>
                         </div>
                         <div class="right w-full flex flex-row items-start justify-end ">
-                            <p class="msg ">
+                            <p class="msg md:text-[21px] text-[12px]">
                                 {{ subTotal }}
                             </p>
                         </div>
