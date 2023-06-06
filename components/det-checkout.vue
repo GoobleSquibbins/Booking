@@ -32,7 +32,6 @@
 
                     </div>
                     <div class="submit md:mt-[20px] mt-[10px] w-full">
-                        <NuxtLink to="/notix" class="w-full md:h-full h-[20px]">
                             <button @click="addToCart(item.id)" class="bg-[#FF5A5F] text-white md:p-[10px] p-0 rounded-[4px] border-[1px] border-[#FF5A5F]
                                                             hover:bg-white hover:border-[1px] hover:border-[#FF5A5F] hover:text-[#FF5A5F]
                                                             transition ease-in-out delay-[30ms] w-full">
@@ -41,7 +40,6 @@
                                 </p>
 
                             </button>
-                        </NuxtLink>
 
                     </div>
                     <p class="font-[300] md:text-[12px] text-[10px] leading-[14px] text-[#484848] mt-[25px]">
@@ -176,7 +174,6 @@ export default {
                         stuffAlreadyInside.push(dataProduct)
                         localStorage.setItem("a", JSON.stringify(stuffAlreadyInside));
                         this.cart = JSON.parse(localStorage.getItem("a"))
-                        console.log(stuffAlreadyInside[10].id + ' camed');
                     } else {
                         for (let j = 0; j < stuffAlreadyInside.length; j++) {
                             console.log('shidded')
@@ -200,6 +197,7 @@ export default {
                 }
                 console.log(dataProduct.id + ' cheese ' + dataProduct.qty)
             }
+            window.location.href = '/notix'
         }
         ,
         async count() {
