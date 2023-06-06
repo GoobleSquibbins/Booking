@@ -26,20 +26,23 @@
                         <br>
 
                         <input v-model="itemNum" type="number" @keyup="count()" class="
-                                                w-full h-[60px] 
-                                                border-[1px] border-[#767676] rounded-[4px]
-                                                text-center text-[16px] leading-[19px]" />
+                                                        w-full h-[60px] 
+                                                        border-[1px] border-[#767676] rounded-[4px]
+                                                        text-center text-[16px] leading-[19px]" />
 
                     </div>
                     <div class="submit mt-[20px] w-full">
-                        <button @click="addToCart(item.id)" class="bg-[#FF5A5F] text-white p-[10px] rounded-[4px] border-[1px] border-[#FF5A5F]
-                                                    hover:bg-white hover:border-[1px] hover:border-[#FF5A5F] hover:text-[#FF5A5F]
-                                                    transition ease-in-out delay-[30ms] w-full">
-                            <p>
-                                Add to cart
-                            </p>
+                        <NuxtLink to="/notix" class="w-full h-full">
+                            <button @click="addToCart(item.id)" class="bg-[#FF5A5F] text-white p-[10px] rounded-[4px] border-[1px] border-[#FF5A5F]
+                                                            hover:bg-white hover:border-[1px] hover:border-[#FF5A5F] hover:text-[#FF5A5F]
+                                                            transition ease-in-out delay-[30ms] w-full">
+                                <p>
+                                    Add to cart
+                                </p>
 
-                        </button>
+                            </button>
+                        </NuxtLink>
+
                     </div>
                     <p class="font-[300] text-[12px] leading-[14px] text-[#484848] mt-[25px]">
                         YOU WON'T BE CHARGED YET
@@ -102,6 +105,12 @@
                     </div>
                 </div>
             </div>
+            <!-- <div class="w-full text-center pb-[10px]">
+                <h1 class="text-center">
+                    Item added to cart
+                </h1>
+            </div> -->
+
         </div>
     </div>
 </template>
@@ -151,7 +160,6 @@ export default {
                     console.log(dataProduct)
                     // this.cart = JSON.parse(localStorage.getItem("a"))
                     console.log('im going insane')
-                    window.location.href = "/checkout"
                 } else {
                     let stuffAlreadyInside = JSON.parse(localStorage.getItem("a"))
                     console.log(stuffAlreadyInside + ' cheese')
@@ -188,11 +196,10 @@ export default {
                         console.log('shid and camed')
                     }
                     console.log('im going insaner')
-                    window.location.href = "/seeAll"
+
                 }
                 console.log(dataProduct.id + ' cheese ' + dataProduct.qty)
             }
-
         }
         ,
         async count() {
